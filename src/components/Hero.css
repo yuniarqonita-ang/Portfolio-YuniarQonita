@@ -1,0 +1,400 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 90px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sticker — pojok kiri bawah hero, tidak nutupin konten */
+.hero-sticker {
+  position: absolute;
+  bottom: 80px;
+  left: 3%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-sticker img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 30px rgba(157, 0, 255, 0.35), 0 0 0 3px rgba(157,0,255,0.2);
+  filter: drop-shadow(0 0 16px rgba(0,240,255,0.3));
+}
+
+/* Background Orbs specific to hero */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.orb-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(157, 0, 255, 0.4) 0%, transparent 70%);
+  top: -100px;
+  right: 10%;
+  animation: orbFloat1 12s ease-in-out infinite alternate;
+}
+
+.orb-2 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.3) 0%, transparent 70%);
+  bottom: 50px;
+  left: 5%;
+  animation: orbFloat2 15s ease-in-out infinite alternate;
+}
+
+.orb-3 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 0, 85, 0.25) 0%, transparent 70%);
+  top: 30%;
+  left: 40%;
+  animation: orbFloat1 10s ease-in-out infinite alternate-reverse;
+}
+
+.floating-star {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+}
+
+@keyframes orbFloat1 {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(40px, -40px) scale(1.1); }
+}
+@keyframes orbFloat2 {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(-30px, 30px) scale(1.05); }
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  animation: pulse-glow 1.5s infinite;
+}
+
+.greeting {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 5.5rem;
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+  letter-spacing: -2px;
+}
+
+.name-glow {
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-purple) 50%, var(--accent-pink) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.role {
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.role::before {
+  content: '';
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-purple));
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.description {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.custom-unique-font {
+  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.linkedin-badge {
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.linkedin-badge a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);
+}
+
+.linkedin-badge a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 119, 181, 0.4);
+}
+
+.linkedin-icon {
+  background: white;
+  color: #0077b5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+/* Stats */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  width: fit-content;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-purple));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border-color);
+}
+
+/* Image Section */
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image-ring-outer {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 0%, var(--accent-color) 25%, transparent 50%, var(--accent-purple) 75%, transparent 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* animation: rotateSlow 8s linear infinite; */
+  padding: 3px;
+}
+
+.image-ring-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.image-blob {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, rgba(157, 0, 255, 0.3), rgba(0, 240, 255, 0.3));
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Floating Badges */
+.floating-badge {
+  position: absolute;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.badge-design {
+  top: 20px;
+  left: -30px;
+  border-color: rgba(157, 0, 255, 0.4);
+}
+
+.badge-web {
+  bottom: 60px;
+  right: -20px;
+  border-color: rgba(0, 240, 255, 0.4);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, var(--accent-color), transparent);
+  margin: 0 auto;
+}
+
+.scroll-indicator span {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 2;
+  }
+
+  .hero-image-wrapper { order: 1; }
+
+  .role { justify-content: center; }
+
+  .hero-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .name {
+    font-size: 4rem;
+  }
+
+  .image-ring-outer {
+    width: 320px;
+    height: 320px;
+  }
+
+  .badge-design { left: 0; }
+  .badge-web { right: 0; }
+}
+
+@media (max-width: 576px) {
+  .name { font-size: 3.2rem; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .image-ring-outer { width: 260px; height: 260px; }
+  .floating-badge { display: none; }
+}

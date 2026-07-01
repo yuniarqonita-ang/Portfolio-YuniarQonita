@@ -1,0 +1,110 @@
+.skills-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-floating-icon {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.4));
+}
+
+.skills-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.04) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.section-title-wrapper {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  padding: 2.5rem 2rem;
+  cursor: default;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--icon-color, var(--accent-color)), transparent);
+}
+
+.skill-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 240, 255, 0.08);
+}
+
+.skill-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--icon-color, var(--accent-color));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.5s ease;
+}
+
+.skill-card:hover .skill-icon-wrapper {
+  transform: rotate(360deg);
+}
+
+.skill-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.skill-list li {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: color 0.2s ease;
+}
+
+.skill-list li:hover {
+  color: var(--text-color);
+}
+
+.skill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
