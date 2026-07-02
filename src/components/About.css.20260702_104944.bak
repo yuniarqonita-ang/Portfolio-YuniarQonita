@@ -181,7 +181,6 @@
   border-color: var(--accent-color);
   color: var(--accent-color);
   background: rgba(0, 240, 255, 0.08);
-}
 /* ========================
    RESPONSIVE
 ======================== */

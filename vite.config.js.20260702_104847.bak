@@ -5,13 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/Portfolio-YuniarQonita/',
-  css: {
-    transformer: 'postcss',
-  },
-  build: {
-    minify: 'esbuild',
-    cssMinify: 'esbuild'
-  }
 })
-
 
