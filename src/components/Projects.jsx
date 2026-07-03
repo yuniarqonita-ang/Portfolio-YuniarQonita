@@ -191,14 +191,14 @@ const Projects = () => {
                         if (project.isDouble) {
                           setSelectedImg({
                             title: project.title,
-                            img1: `/assets/02_Portofolio_Desain/${project.img}`,
-                            img2: `/assets/02_Portofolio_Desain/${project.img2}`,
+                            img1: `${import.meta.env.BASE_URL}assets/02_Portofolio_Desain/${project.img}`,
+                            img2: `${import.meta.env.BASE_URL}assets/02_Portofolio_Desain/${project.img2}`,
                             hideSideLabels: project.hideSideLabels
                           });
                         } else {
                           setSelectedImg({
                             title: project.title,
-                            img1: `/assets/02_Portofolio_Desain/${project.img}`
+                            img1: `${import.meta.env.BASE_URL}assets/02_Portofolio_Desain/${project.img}`
                           });
                         }
                       }}
@@ -208,7 +208,7 @@ const Projects = () => {
                     <div className="gallery-card-front">
                       <div className="gallery-img-wrapper">
                         <img
-                          src={`/assets/02_Portofolio_Desain/${project.img}`}
+                          src={`${import.meta.env.BASE_URL}assets/02_Portofolio_Desain/${project.img}`}
                           alt={project.title}
                           loading="lazy"
                         />
@@ -237,7 +237,7 @@ const Projects = () => {
                       <div className="gallery-card-back">
                         <div className="gallery-img-wrapper">
                           <img
-                            src={`/assets/02_Portofolio_Desain/${project.img2}`}
+                            src={`${import.meta.env.BASE_URL}assets/02_Portofolio_Desain/${project.img2}`}
                             alt={`${project.title} - Belakang`}
                             loading="lazy"
                           />
@@ -305,12 +305,12 @@ const Projects = () => {
                       whileHover={{ scale: 1.03 }}
                       onClick={() => setSelectedImg({
                         title: img.title,
-                        img1: `/assets/03_Proyek_Website_PPID_PKTJ/${img.img}`
+                        img1: `${import.meta.env.BASE_URL}assets/03_Proyek_Website_PPID_PKTJ/${img.img}`
                       })}
                       style={{ cursor: 'pointer' }}
                     >
                       <img
-                        src={`/assets/03_Proyek_Website_PPID_PKTJ/${img.img}`}
+                        src={`${import.meta.env.BASE_URL}assets/03_Proyek_Website_PPID_PKTJ/${img.img}`}
                         alt={img.title}
                         loading="lazy"
                       />

@@ -10,6 +10,14 @@ const Certificates = () => {
 
   // Floating certificate icons
   const certIcons = ['🏆', '🎖️', '📜', '⭐', '🎓', '💎'];
+  const certIconPositions = [
+    { left: 4, top: 12, size: 20, duration: 3.2, delay: 0 },
+    { left: 94, top: 16, size: 20, duration: 3.6, delay: 0.4 },
+    { left: 5, top: 45, size: 18, duration: 3.0, delay: 0.8 },
+    { left: 95, top: 48, size: 18, duration: 3.4, delay: 1.2 },
+    { left: 8, top: 84, size: 20, duration: 3.8, delay: 1.6 },
+    { left: 92, top: 84, size: 20, duration: 3.3, delay: 0.6 },
+  ];
   const [hoveredId, setHoveredId] = useState(null);
   const [flippedCard, setFlippedCard] = useState(null);
 
@@ -141,9 +149,9 @@ const Certificates = () => {
             key={i}
             className="cert-floating-icon"
             style={{
-              left: `${Math.random() * 90 + 5}%`,
-              top: `${Math.random() * 80 + 10}%`,
-              fontSize: `${Math.random() * 12 + 16}px`,
+              left: `${certIconPositions[i].left}%`,
+              top: `${certIconPositions[i].top}%`,
+              fontSize: `${certIconPositions[i].size}px`,
             }}
             animate={{
               y: [0, -10, 0],
@@ -151,9 +159,9 @@ const Certificates = () => {
               scale: [1, 1.1, 1],
             }}
             transition={{
-              duration: Math.random() * 2 + 2,
+              duration: certIconPositions[i].duration,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: certIconPositions[i].delay,
             }}
           >
             {icon}
@@ -176,7 +184,7 @@ const Certificates = () => {
                 <div className="cert-card-front">
                   <div className="cert-img-wrapper" style={{ '--cert-color': cert.color }}>
                     <img
-                      src={`/assets/01_CV_Sertifikat_Ijazah_KTP/${cert.img}`}
+                      src={`${import.meta.env.BASE_URL}assets/01_CV_Sertifikat_Ijazah_KTP/${cert.img}`}
                       alt={cert.title}
                     />
                     <div className="cert-img-shine"></div>
@@ -202,7 +210,7 @@ const Certificates = () => {
                   <div className="cert-card-back">
                     <div className="cert-img-wrapper" style={{ '--cert-color': cert.color }}>
                       <img
-                        src={`/assets/01_CV_Sertifikat_Ijazah_KTP/${cert.img2}`}
+                        src={`${import.meta.env.BASE_URL}assets/01_CV_Sertifikat_Ijazah_KTP/${cert.img2}`}
                         alt={`${cert.title} - Belakang`}
                       />
                     </div>

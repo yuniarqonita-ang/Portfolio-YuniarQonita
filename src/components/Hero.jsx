@@ -7,18 +7,14 @@ import './Hero.css';
 
 // Fixed positions for space elements (so they don't re-randomize on re-render)
 const SPACE_ELEMENTS = [
-  { emoji: '🪐', left: 5, top: 12, size: 38, dur: 7, delay: 0 },
-  { emoji: '🌙', left: 92, top: 8, size: 30, dur: 5, delay: 0.5 },
-  { emoji: '✨', left: 18, top: 75, size: 22, dur: 4, delay: 1 },
-  { emoji: '🌌', left: 80, top: 70, size: 42, dur: 8, delay: 0.3 },
-  { emoji: '🚀', left: 60, top: 5, size: 28, dur: 6, delay: 0.8 },
-  { emoji: '☄️', left: 3, top: 45, size: 26, dur: 5.5, delay: 1.5 },
-  { emoji: '🛸', left: 88, top: 40, size: 34, dur: 7, delay: 0.2 },
-  { emoji: '🌍', left: 48, top: 85, size: 36, dur: 9, delay: 0.7 },
-  { emoji: '⭐', left: 30, top: 20, size: 18, dur: 4.5, delay: 2 },
-  { emoji: '🛰️', left: 72, top: 18, size: 24, dur: 6.5, delay: 0.4 },
-  { emoji: '✨', left: 55, top: 55, size: 20, dur: 3.5, delay: 1.2 },
-  { emoji: '🪐', left: 15, top: 58, size: 32, dur: 8, delay: 0.9 },
+  { emoji: '🪐', left: 4, top: 14, size: 34, dur: 7, delay: 0 },
+  { emoji: '🌙', left: 94, top: 10, size: 28, dur: 5, delay: 0.5 },
+  { emoji: '✨', left: 7, top: 82, size: 18, dur: 4, delay: 1 },
+  { emoji: '🌌', left: 92, top: 78, size: 34, dur: 8, delay: 0.3 },
+  { emoji: '🚀', left: 76, top: 6, size: 24, dur: 6, delay: 0.8 },
+  { emoji: '☄️', left: 3, top: 50, size: 22, dur: 5.5, delay: 1.5 },
+  { emoji: '🛸', left: 95, top: 43, size: 28, dur: 7, delay: 0.2 },
+  { emoji: '🌍', left: 50, top: 92, size: 28, dur: 9, delay: 0.7 },
 ];
 
 const Hero = () => {
@@ -81,7 +77,7 @@ const Hero = () => {
           transition={{ duration: 3, repeat: Infinity, repeatType: 'loop', ease: 'easeInOut' }}
         >
           <img
-            src="/assets/Sticker_YuniarQonita.png"
+            src={`${import.meta.env.BASE_URL}assets/1_20260613_204618_0000.png`}
             alt="Yuniar Sticker"
           />
         </motion.div>
@@ -174,7 +170,7 @@ const Hero = () => {
             className="hero-actions"
           >
             <a
-              href="/assets/01_CV_Sertifikat_Ijazah_KTP/CV_Yuniar_Qonita.pdf"
+              href={`${import.meta.env.BASE_URL}assets/01_CV_Sertifikat_Ijazah_KTP/CV_Yuniar_Qonita.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
@@ -220,7 +216,7 @@ const Hero = () => {
             <div className="image-ring-inner">
               <div className="image-blob">
                 <img
-                  src="/assets/Pas Foto YuniarQonita.png"
+                  src={`${import.meta.env.BASE_URL}assets/Pas Foto YuniarQonita.png`}
                   alt="Yuniar Qonita"
                   className="hero-image"
                 />

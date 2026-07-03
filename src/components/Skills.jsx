@@ -11,6 +11,16 @@ const Skills = () => {
 
   // Floating skill icons
   const skillIcons = ['⚡', '🎯', '💪', '🧠', '🎨', '🔧', '📊', '🌟'];
+  const skillIconPositions = [
+    { left: 4, top: 14, size: 20, duration: 3.2, delay: 0 },
+    { left: 94, top: 18, size: 20, duration: 3.6, delay: 0.3 },
+    { left: 5, top: 48, size: 18, duration: 3.0, delay: 0.6 },
+    { left: 95, top: 50, size: 18, duration: 3.4, delay: 0.9 },
+    { left: 8, top: 82, size: 20, duration: 3.8, delay: 1.2 },
+    { left: 92, top: 82, size: 20, duration: 3.3, delay: 1.5 },
+    { left: 20, top: 6, size: 16, duration: 3.5, delay: 0.2 },
+    { left: 78, top: 6, size: 16, duration: 3.1, delay: 0.8 },
+  ];
 
   const skillCategories = [
     {
@@ -64,9 +74,9 @@ const Skills = () => {
             key={i}
             className="skill-floating-icon"
             style={{
-              left: `${Math.random() * 90 + 5}%`,
-              top: `${Math.random() * 80 + 10}%`,
-              fontSize: `${Math.random() * 15 + 18}px`,
+              left: `${skillIconPositions[i].left}%`,
+              top: `${skillIconPositions[i].top}%`,
+              fontSize: `${skillIconPositions[i].size}px`,
             }}
             animate={{
               y: [0, -12, 0],
@@ -74,9 +84,9 @@ const Skills = () => {
               scale: [1, 1.15, 1],
             }}
             transition={{
-              duration: Math.random() * 2 + 2.5,
+              duration: skillIconPositions[i].duration,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: skillIconPositions[i].delay,
             }}
           >
             {icon}

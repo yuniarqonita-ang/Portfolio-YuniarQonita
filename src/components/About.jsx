@@ -34,7 +34,7 @@ const About = () => {
             <div className="about-img-glow"></div>
             <div className="about-avatar-container">
               <img
-                src="/assets/Foto_FullBody_Transparent.png"
+                src={`${import.meta.env.BASE_URL}assets/Foto_FullBody_Transparent.png`}
                 alt="Yuniar Qonita"
                 className="about-avatar-img"
               />
