@@ -38,11 +38,10 @@ const Contact = () => {
           >
             <div className="contact-orb"></div>
             <h3 className="contact-tagline">
-              Siap untuk berkolaborasi<br />
-              <span className="text-gradient">dalam proyek berikutnya?</span>
+              {t.tagline}
             </h3>
             <p className="contact-body">
-              Jangan ragu untuk menghubungi saya! Saya selalu terbuka untuk peluang kerja baru, kolaborasi desain, atau hanya sekadar ngobrol tentang dunia desain dan teknologi.
+              {t.body}
             </p>
 
             <div className="contact-details">
@@ -56,14 +55,14 @@ const Contact = () => {
               <div className="contact-detail-item">
                 <div className="detail-icon"><FiPhone /></div>
                 <div>
-                  <span className="detail-label">Telepon</span>
+                  <span className="detail-label">{language === 'id' ? 'Telepon' : 'Phone'}</span>
                   <span className="detail-value">+62 895-2673-4638</span>
                 </div>
               </div>
               <div className="contact-detail-item">
                 <div className="detail-icon"><FiMapPin /></div>
                 <div>
-                  <span className="detail-label">Lokasi</span>
+                  <span className="detail-label">{language === 'id' ? 'Lokasi' : 'Location'}</span>
                   <span className="detail-value">Tegal, Jawa Tengah, Indonesia</span>
                 </div>
               </div>

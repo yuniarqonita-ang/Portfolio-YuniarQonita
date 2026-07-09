@@ -8,6 +8,7 @@ import './Skills.css';
 const Skills = () => {
   const { language } = useContext(LanguageContext);
   const t = translations[language].skills;
+  const isEN = language === 'en';
 
   // Floating skill icons
   const skillIcons = ['⚡', '🎯', '💪', '🧠', '🎨', '🔧', '📊', '🌟'];
@@ -27,31 +28,41 @@ const Skills = () => {
       title: t.design,
       icon: <FiPenTool />,
       color: 'var(--accent-purple)',
-      skills: ['Canva', 'CorelDRAW', 'Desain Grafis', 'Desain Logo', 'Desain Kemasan', 'Desain Banner & Poster', 'Desain Merchandise'],
+      skills: isEN
+        ? ['Canva', 'CorelDRAW', 'Graphic Design', 'Logo Design', 'Packaging Design', 'Banner & Poster Design', 'Merchandise Design']
+        : ['Canva', 'CorelDRAW', 'Desain Grafis', 'Desain Logo', 'Desain Kemasan', 'Desain Banner & Poster', 'Desain Merchandise'],
     },
     {
       title: t.web,
       icon: <FiCpu />,
       color: 'var(--accent-color)',
-      skills: ['Troubleshooting IT', 'Diagnosa Sistem Operasi', 'Pengembangan Aplikasi Back Office', 'Dukungan Teknis Pengguna'],
+      skills: isEN
+        ? ['IT Troubleshooting', 'OS Diagnostics', 'Back Office Application Development', 'User Technical Support']
+        : ['Troubleshooting IT', 'Diagnosa Sistem Operasi', 'Pengembangan Aplikasi Back Office', 'Dukungan Teknis Pengguna'],
     },
     {
       title: t.uiux,
       icon: <FiDatabase />,
       color: '#00e5ff',
-      skills: ['Microsoft Office (Word, Excel, PowerPoint)', 'Google Forms', 'SmartPLS', 'ANATES', 'Pengolahan Data Statistik', 'Survei Lapangan'],
+      skills: isEN
+        ? ['Microsoft Office (Word, Excel, PowerPoint)', 'Google Forms', 'SmartPLS', 'ANATES', 'Statistical Data Processing', 'Field Survey']
+        : ['Microsoft Office (Word, Excel, PowerPoint)', 'Google Forms', 'SmartPLS', 'ANATES', 'Pengolahan Data Statistik', 'Survei Lapangan'],
     },
     {
       title: t.soft,
       icon: <FiUsers />,
       color: 'var(--accent-pink)',
-      skills: ['Kepemimpinan', 'Komunikasi Efektif', 'Perencanaan Strategis', 'Manajemen Organisasi', 'Pemecahan Masalah', 'Manajemen Waktu', 'Kerja Tim'],
+      skills: isEN
+        ? ['Leadership', 'Effective Communication', 'Strategic Planning', 'Organizational Management', 'Problem Solving', 'Time Management', 'Teamwork']
+        : ['Kepemimpinan', 'Komunikasi Efektif', 'Perencanaan Strategis', 'Manajemen Organisasi', 'Pemecahan Masalah', 'Manajemen Waktu', 'Kerja Tim'],
     },
     {
-      title: 'Bahasa',
+      title: isEN ? 'Languages' : 'Bahasa',
       icon: <FiGlobe />,
       color: '#ff6b35',
-      skills: ['Bahasa Indonesia — Native/Fasih (10/10)'],
+      skills: isEN
+        ? ['Indonesian — Native / Fluent (10/10)']
+        : ['Bahasa Indonesia — Native/Fasih (10/10)'],
     },
   ];
 

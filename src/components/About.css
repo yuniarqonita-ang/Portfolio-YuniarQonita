@@ -1,5 +1,42 @@
 .about-section {
   position: relative;
+  overflow: hidden;
+}
+
+/* ========================
+   FLOATING ANIMATION IMAGES
+   (kristal, saturnus, awan — ditempatkan di About section)
+======================== */
+.about-anim-img {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  filter: drop-shadow(0 0 20px rgba(157, 0, 255, 0.3));
+}
+
+/* Kristal kiri atas — besar, mengisi ruang kosong */
+.anim-kristal-1 {
+  left: -60px;
+  top: 10%;
+  width: 280px;
+  opacity: 0.7;
+}
+
+/* Saturnus kanan tengah */
+.anim-saturnus-1 {
+  right: -50px;
+  top: 35%;
+  width: 260px;
+  opacity: 0.65;
+}
+
+/* Awan bawah tengah */
+.anim-awan {
+  left: 50%;
+  bottom: -30px;
+  transform: translateX(-50%);
+  width: 350px;
+  opacity: 0.5;
 }
 
 /* ========================
@@ -7,69 +44,134 @@
 ======================== */
 .about-content {
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 420px 1fr;
   gap: 5rem;
-  align-items: center;
+  align-items: start;
   margin-bottom: 5rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* ========================
-   LEFT: TRANSPARENT PROFILE PHOTO (NO BOX)
+   LEFT: PROFILE CARD
 ======================== */
-.about-photo-wrapper {
+.about-profile-card {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100%;
+  background: linear-gradient(135deg, rgba(16, 0, 40, 0.85), rgba(6, 6, 20, 0.9));
+  border: 1px solid rgba(157, 0, 255, 0.35);
+  border-radius: 28px;
+  padding: 3rem 2rem;
+  text-align: center;
+  overflow: hidden;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.5),
+    0 0 50px rgba(157, 0, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-.about-img-glow {
+/* Animated glow behind card */
+.profile-glow-orb {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 280px;
-  height: 200px;
-  background: radial-gradient(ellipse at bottom, rgba(0, 240, 255, 0.3) 0%, rgba(157, 0, 255, 0.2) 50%, transparent 70%);
-  filter: blur(40px);
-  z-index: 0;
+  top: -80px;
+  left: -80px;
+  width: 260px;
+  height: 260px;
+  background: conic-gradient(from 0deg, var(--accent-purple), var(--accent-color), var(--accent-pink), var(--accent-purple));
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.35;
   pointer-events: none;
+  animation: rotateGlow 12s linear infinite;
 }
 
-/* Container sekarang TANPA kotak — transparan penuh */
-.about-avatar-container {
-  width: 100%;
-  max-width: 380px;
-  position: relative;
-  background: transparent;
-  border: none;
-  padding: 0;
-  overflow: visible;
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-.about-avatar-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
+/* Big YQ initials */
+.profile-monogram {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-color), var(--accent-pink));
+  color: white;
+  box-shadow:
+    0 0 0 5px rgba(157, 0, 255, 0.2),
+    0 0 40px rgba(157, 0, 255, 0.5),
+    0 15px 40px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 1;
-  transition: transform 0.5s ease, filter 0.5s ease;
-  filter: drop-shadow(0 10px 30px rgba(0, 240, 255, 0.3))
-          drop-shadow(0 5px 15px rgba(157, 0, 255, 0.3));
+  letter-spacing: 2px;
 }
 
-.about-avatar-container:hover .about-avatar-img {
-  transform: scale(1.04) translateY(-6px);
-  filter: drop-shadow(0 15px 40px rgba(0, 240, 255, 0.5))
-          drop-shadow(0 5px 20px rgba(157, 0, 255, 0.5));
+.profile-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0.3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-role {
+  font-size: 0.85rem;
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Mini skill bars */
+.profile-skills-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.mini-skill {
+  text-align: left;
+}
+
+.mini-skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.mini-skill-track {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.mini-skill-fill {
+  height: 100%;
+  border-radius: 6px;
+  box-shadow: 0 0 8px currentColor;
 }
 
 /* Badge floating */
 .about-badge {
   position: absolute;
-  bottom: 20px;
+  bottom: -16px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -181,17 +283,23 @@
 @media (max-width: 1100px) {
   .about-content {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 4rem;
   }
 
-  .about-photo-wrapper {
-    max-width: 300px;
+  .about-profile-card {
+    max-width: 380px;
     margin: 0 auto;
   }
+
+  .anim-kristal-1 { width: 180px; left: -30px; }
+  .anim-saturnus-1 { width: 160px; right: -30px; }
+  .anim-awan { width: 220px; }
 }
 
 @media (max-width: 576px) {
   .info-row {
     grid-template-columns: 1fr;
   }
+
+  .about-anim-img { display: none; }
 }

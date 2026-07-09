@@ -13,14 +13,10 @@ export const translations = {
       description: 'Sarjana Pendidikan Matematika dari Universitas Pancasakti Tegal dengan IPK 3,64. Berpengalaman dalam Desain Grafis, Pengembangan Web, dan Teknologi Informasi. Bersertifikasi BNSP sebagai Desainer Grafis Muda.',
       downloadCV: 'Unduh CV',
       contactMe: 'Hubungi Saya',
-      stats: {
-        exp: 'Tahun Aktif',
-        proj: 'Karya Desain',
-        cert: 'Sertifikat',
-      },
     },
     about: {
       title: 'Tentang Saya',
+      role: 'Desainer Grafis & Web Developer',
       p1: 'Saya adalah individu kreatif yang senang mengubah ide menjadi karya visual yang modern, fungsional, dan berdampak.',
       p2: 'Dengan pengalaman dari program magang di PKTJ Tegal, Kampus Mengajar MBKM, Program PLP, dan pertukaran mahasiswa PMM — saya terbiasa bekerja lintas disiplin, beradaptasi cepat, dan memberikan hasil terbaik dalam setiap penugasan.',
       email: 'Email',
@@ -50,18 +46,6 @@ export const translations = {
       designTab: 'Desain Grafis',
       webTab: 'Web Development',
       viewProject: 'Lihat Proyek',
-      desc: {
-        skincare: 'Desain logo profesional untuk merek toko online perawatan kulit (skincare). Mengutamakan kesan elegan, modern, dan kepercayaan konsumen.',
-        basreng: 'Desain kemasan produk camilan Bakso Goreng (Basreng) yang menarik, berani, dan menonjol di rak pasaran.',
-        promosi: 'Desain poster promosi kreatif dengan visual yang kuat untuk meningkatkan daya tarik dan jangkauan kampanye.',
-        sumpah: 'Desain poster memperingati Hari Sumpah Pemuda dengan estetika bold, patriotik, dan penuh semangat kebangsaan.',
-        xbanner: 'Desain X-Banner untuk kebutuhan promosi bisnis FnB dan transportasi dengan palet warna yang energetik dan informatif.',
-        notebook: 'Desain cover & tata letak buku catatan (notebook) front-back yang estetik, simpel, dan fungsional.',
-        undangan: 'Desain undangan dua sisi (luar & dalam) dengan tata letak minimalis, elegan, dan mudah dibaca.',
-        idcard: 'Desain ID Card panitia/pegawai bergaya korporat profesional dengan identitas visual yang kuat dan bersih.',
-        sablon: 'Desain sablon kaos kreatif dengan konsep artistik, cocok untuk kebutuhan merchandise dan event kampus.',
-        banner: 'Desain banner promosi digital dengan hierarki visual yang kuat dan layout yang bersih.',
-      }
     },
     certificates: {
       title: 'Sertifikat & Penghargaan',
@@ -72,6 +56,8 @@ export const translations = {
       email: 'Alamat Email',
       message: 'Tulis Pesan Anda',
       send: 'Kirim Pesan',
+      tagline: 'Siap untuk berkolaborasi dalam proyek berikutnya?',
+      body: 'Jangan ragu untuk menghubungi saya! Saya selalu terbuka untuk peluang kerja baru, kolaborasi desain, atau hanya sekadar ngobrol tentang dunia desain dan teknologi.',
     },
   },
   en: {
@@ -88,23 +74,19 @@ export const translations = {
       description: 'Mathematics Education graduate from Universitas Pancasakti Tegal (GPA 3.64). Experienced in Graphic Design, Web Development, and IT. BNSP-certified as a Junior Graphic Designer.',
       downloadCV: 'Download CV',
       contactMe: 'Contact Me',
-      stats: {
-        exp: 'Active Years',
-        proj: 'Design Works',
-        cert: 'Certificates',
-      },
     },
     about: {
       title: 'About Me',
+      role: 'Graphic Designer & Web Developer',
       p1: 'I am a creative individual who loves transforming ideas into modern, functional, and impactful visual works.',
-      p2: 'With experience from internship at PKTJ Tegal, the Kampus Mengajar MBKM program, PLP, and the PMM student exchange — I am accustomed to cross-disciplinary work, quick adaptation, and delivering excellent results in every assignment.',
+      p2: 'With hands-on experience from an internship at PKTJ Tegal, the Kampus Mengajar MBKM program, Teaching Practice (PLP), and the PMM national student exchange — I am well-versed in cross-disciplinary collaboration, rapid adaptation, and delivering outstanding results in every assignment.',
       email: 'Email',
       phone: 'Phone',
       location: 'Location',
       university: 'University',
       gpa: 'GPA',
       period: 'Period',
-      plp: 'PLP',
+      plp: 'Teaching Practice',
     },
     skills: {
       title: 'Core Skills',
@@ -117,26 +99,14 @@ export const translations = {
       title: 'Experience',
       edu: 'Education',
       work: 'Work Experience',
-      org: 'Organization',
-      academic: 'Academic Experience',
+      org: 'Organizations',
+      academic: 'Academic Programs',
     },
     projects: {
       title: 'Recent Works & Projects',
       designTab: 'Graphic Design',
       webTab: 'Web Development',
       viewProject: 'View Project',
-      desc: {
-        skincare: 'Professional logo design for an online skincare brand, emphasizing elegance, modernity, and consumer trust.',
-        basreng: 'Eye-catching and bold packaging design for a Basreng (Fried Meatball) snack product to stand out on the shelf.',
-        promosi: 'Creative promotional poster with strong visuals to boost campaign reach and audience engagement.',
-        sumpah: 'Poster design commemorating Sumpah Pemuda Day with a bold, patriotic, and spirited national aesthetic.',
-        xbanner: 'X-Banner design for F&B and transportation business promotions with energetic colors and clear information hierarchy.',
-        notebook: 'Aesthetic and functional front-back cover & layout design for a custom notebook.',
-        undangan: 'Two-sided invitation design (front & back) with a minimalist, elegant, and readable layout.',
-        idcard: 'Professional corporate-style ID Card design with strong visual identity and a clean, organized look.',
-        sablon: 'Creative t-shirt screen print design with an artistic concept for campus merchandise and events.',
-        banner: 'Digital promotional banner with a strong visual hierarchy and a clean, structured layout.',
-      }
     },
     certificates: {
       title: 'Certificates & Awards',
@@ -147,6 +117,8 @@ export const translations = {
       email: 'Email Address',
       message: 'Write Your Message',
       send: 'Send Message',
+      tagline: 'Ready to collaborate on your next project?',
+      body: "Feel free to reach out! I am always open to new career opportunities, design collaborations, or simply a conversation about the world of design and technology.",
     },
   }
 };

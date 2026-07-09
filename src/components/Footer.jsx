@@ -98,17 +98,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      
-      {/* Elegant peeking transparent profile photo at the bottom right */}
-      <motion.div 
-        className="footer-profile-peek"
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-      >
-        <img src="/assets/Foto FullBody YuniarQonita tanpa background.PNG" alt="Yuniar Qonita" />
-      </motion.div>
     </footer>
   );
 };

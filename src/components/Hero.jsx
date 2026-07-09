@@ -1,11 +1,11 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useContext } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
 import { motion } from 'framer-motion';
 import { FiDownload, FiMail } from 'react-icons/fi';
 import './Hero.css';
 
-// Fixed positions for floating elements — campuran emoji & gambar animasi nyata
+// Fixed positions for floating emoji elements — no real photos here
 const SPACE_ELEMENTS = [
   { emoji: '🪐', left: 5, top: 12, size: 38, dur: 7, delay: 0 },
   { emoji: '🌙', left: 92, top: 8, size: 30, dur: 5, delay: 0.5 },
@@ -15,15 +15,8 @@ const SPACE_ELEMENTS = [
   { emoji: '🛸', left: 88, top: 40, size: 34, dur: 7, delay: 0.2 },
   { emoji: '⭐', left: 30, top: 20, size: 18, dur: 4.5, delay: 2 },
   { emoji: '✨', left: 55, top: 55, size: 20, dur: 3.5, delay: 1.2 },
-];
-
-// Gambar animasi nyata dari portofolio
-const ANIM_IMAGES = [
-  { src: '/assets/animasi/kristal tb 1.PNG', left: 8, top: 30, width: 80, dur: 6, delay: 0 },
-  { src: '/assets/animasi/kristal tb 2.PNG', left: 82, top: 60, width: 70, dur: 7, delay: 0.5 },
-  { src: '/assets/animasi/saturnus tb 1.PNG', left: 72, top: 10, width: 90, dur: 8, delay: 1 },
-  { src: '/assets/animasi/saturnus tb 2.PNG', left: 2, top: 65, width: 80, dur: 9, delay: 0.3 },
-  { src: '/assets/animasi/awan cuco tb.PNG', left: 40, top: 80, width: 110, dur: 5, delay: 0.7 },
+  { emoji: '💫', left: 75, top: 78, size: 24, dur: 6, delay: 0.6 },
+  { emoji: '🌟', left: 45, top: 88, size: 20, dur: 4, delay: 1.8 },
 ];
 
 const Hero = () => {
@@ -50,7 +43,7 @@ const Hero = () => {
       <div className="hero-orb orb-2"></div>
       <div className="hero-orb orb-3"></div>
 
-      {/* Fixed-position Space Elements — tidak random tiap render */}
+      {/* Floating Emoji Space Elements */}
       {SPACE_ELEMENTS.map((el, i) => (
         <motion.div
           key={i}
@@ -77,37 +70,8 @@ const Hero = () => {
         </motion.div>
       ))}
 
-      {/* Gambar animasi nyata (kristal, saturnus, awan) */}
-      {ANIM_IMAGES.map((img, i) => (
-        <motion.img
-          key={`anim-${i}`}
-          src={img.src}
-          alt=""
-          aria-hidden="true"
-          style={{
-            position: 'absolute',
-            left: `${img.left}%`,
-            top: `${img.top}%`,
-            width: `${img.width}px`,
-            pointerEvents: 'none',
-            zIndex: 0,
-          }}
-          animate={{
-            y: [0, -18, 0],
-            rotate: [0, 5, -5, 0],
-            opacity: [0.6, 1, 0.6],
-          }}
-          transition={{
-            duration: img.dur,
-            repeat: Infinity,
-            delay: img.delay,
-            ease: 'easeInOut',
-          }}
-        />
-      ))}
-
       <div className="hero-container container">
-        {/* Sticker — di pojok kanan bawah section hero, tidak nutupin teks */}
+        {/* Sticker — pojok kiri bawah hero */}
         <motion.div
           className="hero-sticker"
           initial={{ scale: 0.8, opacity: 0 }}
@@ -229,36 +193,41 @@ const Hero = () => {
           >
             <div className="stat-item">
               <span className="stat-num">10+</span>
-              <span className="stat-label">Proyek Desain</span>
+              <span className="stat-label">{language === 'id' ? 'Proyek Desain' : 'Design Works'}</span>
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
               <span className="stat-num">10+</span>
-              <span className="stat-label">Sertifikat</span>
+              <span className="stat-label">{language === 'id' ? 'Sertifikat' : 'Certificates'}</span>
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
               <span className="stat-num">3.64</span>
-              <span className="stat-label">IPK</span>
+              <span className="stat-label">GPA</span>
             </div>
           </motion.div>
         </div>
 
+        {/* Hero Right: Animated Name Card instead of photo */}
         <motion.div
-          className="hero-image-wrapper"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          className="hero-namecard-wrapper"
+          initial={{ opacity: 0, scale: 0.8, x: 40 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ delay: 0.5, duration: 0.9, ease: 'easeOut' }}
         >
-          <div className="image-ring-outer">
-            <div className="image-ring-inner">
-              <div className="image-blob">
-                <img
-                  src={`${import.meta.env.BASE_URL}assets/Pas Foto YuniarQonita.png`}
-                  alt="Yuniar Qonita"
-                  className="hero-image"
-                />
-              </div>
+          <div className="hero-namecard glass-panel">
+            <motion.div
+              className="namecard-orb"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+            />
+            <div className="namecard-initials">YQ</div>
+            <div className="namecard-title">Yuniar Qonita</div>
+            <div className="namecard-subtitle">{t.role}</div>
+            <div className="namecard-badges">
+              <span className="namecard-badge">🎨 Graphic Designer</span>
+              <span className="namecard-badge">💻 Web Developer</span>
+              <span className="namecard-badge">✅ BNSP Certified</span>
             </div>
           </div>
 
