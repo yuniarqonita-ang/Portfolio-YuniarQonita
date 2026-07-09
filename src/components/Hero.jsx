@@ -115,7 +115,7 @@ const Hero = () => {
           transition={{ duration: 3, repeat: Infinity, repeatType: 'loop', ease: 'easeInOut' }}
         >
           <img
-            src="/assets/Sticker_YuniarQonita.png"
+            src={`${import.meta.env.BASE_URL}assets/1_20260613_204618_0000.png`}
             alt="Yuniar Sticker"
           />
         </motion.div>
@@ -208,7 +208,7 @@ const Hero = () => {
             className="hero-actions"
           >
             <a
-              href="/assets/01_CV_Sertifikat_Ijazah_KTP/CV_Yuniar_Qonita.pdf"
+              href={`${import.meta.env.BASE_URL}assets/01_CV_Sertifikat_Ijazah_KTP/CV_Yuniar_Qonita.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
@@ -254,7 +254,7 @@ const Hero = () => {
             <div className="image-ring-inner">
               <div className="image-blob">
                 <img
-                  src="/assets/Pas Foto YuniarQonita.png"
+                  src={`${import.meta.env.BASE_URL}assets/Pas Foto YuniarQonita.png`}
                   alt="Yuniar Qonita"
                   className="hero-image"
                 />

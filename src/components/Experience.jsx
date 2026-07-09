@@ -11,6 +11,14 @@ const Experience = () => {
 
   // Floating experience icons
   const expIcons = ['💼', '🎓', '🏆', '📚', '🚀', '⭐'];
+  const expIconPositions = [
+    { left: 4, top: 12, size: 20, duration: 3.2, delay: 0 },
+    { left: 94, top: 16, size: 20, duration: 3.6, delay: 0.4 },
+    { left: 5, top: 45, size: 18, duration: 3.0, delay: 0.8 },
+    { left: 95, top: 48, size: 18, duration: 3.4, delay: 1.2 },
+    { left: 8, top: 84, size: 20, duration: 3.8, delay: 1.6 },
+    { left: 92, top: 84, size: 20, duration: 3.3, delay: 0.6 },
+  ];
 
   const experiences = [
     {
@@ -175,9 +183,9 @@ const Experience = () => {
             key={i}
             className="exp-floating-icon"
             style={{
-              left: `${Math.random() * 90 + 5}%`,
-              top: `${Math.random() * 80 + 10}%`,
-              fontSize: `${Math.random() * 12 + 16}px`,
+              left: `${expIconPositions[i].left}%`,
+              top: `${expIconPositions[i].top}%`,
+              fontSize: `${expIconPositions[i].size}px`,
             }}
             animate={{
               y: [0, -8, 0],
@@ -185,9 +193,9 @@ const Experience = () => {
               scale: [1, 1.1, 1],
             }}
             transition={{
-              duration: Math.random() * 2 + 2,
+              duration: expIconPositions[i].duration,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: expIconPositions[i].delay,
             }}
           >
             {icon}
