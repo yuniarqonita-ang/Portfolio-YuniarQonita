@@ -168,20 +168,25 @@
 .footer-profile-peek {
   position: absolute;
   bottom: 0;
-  right: 8%;
-  width: 150px;
+  right: 6%;
+  width: 180px;
   height: auto;
   pointer-events: none;
-  z-index: 0;
+  z-index: 2;
+  background: transparent;
 }
 
 .footer-profile-peek img {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 -5px 15px rgba(0, 240, 255, 0.15));
-  mask-image: linear-gradient(to top, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
-  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+  background: transparent;
+  /* Pure transparent — no background box */
+  filter: drop-shadow(0 -8px 20px rgba(0, 240, 255, 0.25))
+          drop-shadow(0 5px 15px rgba(157, 0, 255, 0.2));
+  /* Soft fade at top only */
+  mask-image: linear-gradient(to top, rgba(0,0,0,1) 60%, rgba(0,0,0,0.7) 85%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 60%, rgba(0,0,0,0.7) 85%, rgba(0,0,0,0) 100%);
 }
 
 @media (max-width: 992px) {

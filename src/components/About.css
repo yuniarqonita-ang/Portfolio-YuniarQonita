@@ -7,77 +7,69 @@
 ======================== */
 .about-content {
   display: grid;
-  grid-template-columns: 420px 1fr;
+  grid-template-columns: 400px 1fr;
   gap: 5rem;
-  align-items: start;
+  align-items: center;
   margin-bottom: 5rem;
 }
 
 /* ========================
-   LEFT: TRANSPARENT PROFILE PHOTO
+   LEFT: TRANSPARENT PROFILE PHOTO (NO BOX)
 ======================== */
 .about-photo-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
 }
 
 .about-img-glow {
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 320px;
-  height: 320px;
-  background: radial-gradient(circle, rgba(0, 240, 255, 0.25) 0%, rgba(157, 0, 255, 0.25) 50%, transparent 70%);
-  border-radius: 50%;
-  filter: blur(50px);
-  z-index: -1;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 200px;
+  background: radial-gradient(ellipse at bottom, rgba(0, 240, 255, 0.3) 0%, rgba(157, 0, 255, 0.2) 50%, transparent 70%);
+  filter: blur(40px);
+  z-index: 0;
   pointer-events: none;
 }
 
+/* Container sekarang TANPA kotak — transparan penuh */
 .about-avatar-container {
   width: 100%;
-  max-width: 320px;
-  border-radius: 24px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
-  border: 1px solid var(--border-color);
-  backdrop-filter: blur(8px);
-  padding: 1.5rem 1.5rem 0; /* padding at bottom is 0 so the photo sits flat */
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  max-width: 380px;
   position: relative;
-}
-
-.about-avatar-container::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 60%, rgba(6, 6, 20, 0.8));
-  pointer-events: none;
-  z-index: 1;
+  background: transparent;
+  border: none;
+  padding: 0;
+  overflow: visible;
 }
 
 .about-avatar-img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
   transition: transform 0.5s ease, filter 0.5s ease;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(0 10px 30px rgba(0, 240, 255, 0.3))
+          drop-shadow(0 5px 15px rgba(157, 0, 255, 0.3));
 }
 
 .about-avatar-container:hover .about-avatar-img {
-  transform: scale(1.04) translateY(-4px);
-  filter: drop-shadow(0 15px 25px rgba(157, 0, 255, 0.5));
+  transform: scale(1.04) translateY(-6px);
+  filter: drop-shadow(0 15px 40px rgba(0, 240, 255, 0.5))
+          drop-shadow(0 5px 20px rgba(157, 0, 255, 0.5));
 }
 
-/* Badge on top of photo */
+/* Badge floating */
 .about-badge {
   position: absolute;
-  bottom: -15px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -181,22 +173,20 @@
   border-color: var(--accent-color);
   color: var(--accent-color);
   background: rgba(0, 240, 255, 0.08);
+}
+
 /* ========================
    RESPONSIVE
 ======================== */
 @media (max-width: 1100px) {
   .about-content {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 3rem;
   }
 
   .about-photo-wrapper {
-    max-width: 320px;
+    max-width: 300px;
     margin: 0 auto;
-  }
-
-  .about-badge {
-    bottom: -20px;
   }
 }
 

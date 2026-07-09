@@ -17,14 +17,14 @@ const Projects = () => {
     {
       id: 1,
       title: 'Cover Portofolio Desain',
-      img: '01_Cover_Portofolio_Desain.jpg',
+      img: 'Cover Portfolio.PNG',
       desc: 'Halaman cover portofolio desain grafis profesional.',
       tag: 'Portfolio Cover',
     },
     {
       id: 2,
       title: 'Media Sosial & Skill',
-      img: '02_Media_Sosial_dan_Skill.jpg',
+      img: 'MediaSosial Portfolio.PNG',
       desc: 'Desain konten media sosial dan visualisasi skill chart.',
       tag: 'Social Media Design',
     },
@@ -78,7 +78,7 @@ const Projects = () => {
     {
       id: 9,
       title: 'Cover Notebook (Depan & Belakang)',
-      img: 'Cover Depan Notebook.jpg',
+      img: 'Notebook Portfolio.PNG',
       img2: 'Cover Belakang Notebook.jpg',
       desc: 'Desain cover notebook bolak-balik — depan & belakang.',
       tag: 'Print Design',

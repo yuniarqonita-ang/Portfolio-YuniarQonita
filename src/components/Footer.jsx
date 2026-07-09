@@ -107,7 +107,7 @@ const Footer = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
       >
-        <img src="/assets/Foto_Bottom_Transparent.png" alt="Yuniar Qonita" />
+        <img src="/assets/Foto FullBody YuniarQonita tanpa background.PNG" alt="Yuniar Qonita" />
       </motion.div>
     </footer>
   );

@@ -5,20 +5,25 @@ import { motion } from 'framer-motion';
 import { FiDownload, FiMail } from 'react-icons/fi';
 import './Hero.css';
 
-// Fixed positions for space elements (so they don't re-randomize on re-render)
+// Fixed positions for floating elements — campuran emoji & gambar animasi nyata
 const SPACE_ELEMENTS = [
   { emoji: '🪐', left: 5, top: 12, size: 38, dur: 7, delay: 0 },
   { emoji: '🌙', left: 92, top: 8, size: 30, dur: 5, delay: 0.5 },
   { emoji: '✨', left: 18, top: 75, size: 22, dur: 4, delay: 1 },
-  { emoji: '🌌', left: 80, top: 70, size: 42, dur: 8, delay: 0.3 },
   { emoji: '🚀', left: 60, top: 5, size: 28, dur: 6, delay: 0.8 },
   { emoji: '☄️', left: 3, top: 45, size: 26, dur: 5.5, delay: 1.5 },
   { emoji: '🛸', left: 88, top: 40, size: 34, dur: 7, delay: 0.2 },
-  { emoji: '🌍', left: 48, top: 85, size: 36, dur: 9, delay: 0.7 },
   { emoji: '⭐', left: 30, top: 20, size: 18, dur: 4.5, delay: 2 },
-  { emoji: '🛰️', left: 72, top: 18, size: 24, dur: 6.5, delay: 0.4 },
   { emoji: '✨', left: 55, top: 55, size: 20, dur: 3.5, delay: 1.2 },
-  { emoji: '🪐', left: 15, top: 58, size: 32, dur: 8, delay: 0.9 },
+];
+
+// Gambar animasi nyata dari portofolio
+const ANIM_IMAGES = [
+  { src: '/assets/animasi/kristal tb 1.PNG', left: 8, top: 30, width: 80, dur: 6, delay: 0 },
+  { src: '/assets/animasi/kristal tb 2.PNG', left: 82, top: 60, width: 70, dur: 7, delay: 0.5 },
+  { src: '/assets/animasi/saturnus tb 1.PNG', left: 72, top: 10, width: 90, dur: 8, delay: 1 },
+  { src: '/assets/animasi/saturnus tb 2.PNG', left: 2, top: 65, width: 80, dur: 9, delay: 0.3 },
+  { src: '/assets/animasi/awan cuco tb.PNG', left: 40, top: 80, width: 110, dur: 5, delay: 0.7 },
 ];
 
 const Hero = () => {
@@ -70,6 +75,35 @@ const Hero = () => {
         >
           {el.emoji}
         </motion.div>
+      ))}
+
+      {/* Gambar animasi nyata (kristal, saturnus, awan) */}
+      {ANIM_IMAGES.map((img, i) => (
+        <motion.img
+          key={`anim-${i}`}
+          src={img.src}
+          alt=""
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            left: `${img.left}%`,
+            top: `${img.top}%`,
+            width: `${img.width}px`,
+            pointerEvents: 'none',
+            zIndex: 0,
+          }}
+          animate={{
+            y: [0, -18, 0],
+            rotate: [0, 5, -5, 0],
+            opacity: [0.6, 1, 0.6],
+          }}
+          transition={{
+            duration: img.dur,
+            repeat: Infinity,
+            delay: img.delay,
+            ease: 'easeInOut',
+          }}
+        />
       ))}
 
       <div className="hero-container container">
