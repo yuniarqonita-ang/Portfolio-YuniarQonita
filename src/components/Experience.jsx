@@ -213,6 +213,41 @@ const Experience = () => {
 
   return (
     <section className="section experience-section" id="experience">
+      {/* Decorative Space Animation Elements */}
+      <motion.img
+        src={`${import.meta.env.BASE_URL}assets/animasi/saturnus tb 1.PNG`}
+        alt=""
+        aria-hidden="true"
+        className="exp-anim-saturnus"
+        animate={{
+          y: [0, -25, 0],
+          rotate: [0, 8, -8, 0],
+          scale: [1, 1.05, 1],
+        }}
+        transition={{
+          duration: 9,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+      />
+      <motion.img
+        src={`${import.meta.env.BASE_URL}assets/animasi/kristal tb 1.PNG`}
+        alt=""
+        aria-hidden="true"
+        className="exp-anim-kristal"
+        animate={{
+          y: [0, 22, 0],
+          rotate: [0, -12, 12, 0],
+          scale: [1, 1.08, 1],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 0.8,
+        }}
+      />
+
       <div className="container">
         <motion.div
           className="section-title-wrapper"

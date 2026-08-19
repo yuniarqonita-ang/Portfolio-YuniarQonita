@@ -138,6 +138,40 @@ const Projects = () => {
 
   return (
     <section className="section projects-section" id="projects">
+      {/* Decorative Space Animation Elements */}
+      <motion.img
+        src={`${import.meta.env.BASE_URL}assets/animasi/awan cuco tb.PNG`}
+        alt=""
+        aria-hidden="true"
+        className="proj-anim-awan"
+        animate={{
+          x: [-20, 20, -20],
+          y: [0, -15, 0],
+          opacity: [0.6, 0.85, 0.6],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+      />
+      <motion.img
+        src={`${import.meta.env.BASE_URL}assets/animasi/saturnus tb 2.PNG`}
+        alt=""
+        aria-hidden="true"
+        className="proj-anim-saturnus"
+        animate={{
+          y: [0, -22, 0],
+          rotate: [0, 8, -8, 0],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 1,
+        }}
+      />
+
       <div className="container">
         <motion.div
           className="section-title-wrapper"

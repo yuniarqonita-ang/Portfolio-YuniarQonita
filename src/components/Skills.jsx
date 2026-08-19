@@ -68,6 +68,41 @@ const Skills = () => {
 
   return (
     <section className="section skills-section" id="skills">
+      {/* Decorative Space Animation Elements */}
+      <motion.img
+        src={`${import.meta.env.BASE_URL}assets/animasi/saturnus tb 2.PNG`}
+        alt=""
+        aria-hidden="true"
+        className="skills-anim-saturnus"
+        animate={{
+          y: [0, -20, 0],
+          rotate: [0, -6, 6, 0],
+          scale: [1, 1.05, 1],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+      />
+      <motion.img
+        src={`${import.meta.env.BASE_URL}assets/animasi/kristal tb 2.PNG`}
+        alt=""
+        aria-hidden="true"
+        className="skills-anim-kristal"
+        animate={{
+          y: [0, 20, 0],
+          rotate: [0, 10, -10, 0],
+          scale: [1, 1.06, 1],
+        }}
+        transition={{
+          duration: 6.5,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 0.7,
+        }}
+      />
+
       <div className="container">
         <motion.div
           className="section-title-wrapper"

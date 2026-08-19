@@ -70,20 +70,42 @@ const Hero = () => {
         </motion.div>
       ))}
 
-      <div className="hero-container container">
-        {/* Sticker — pojok kiri bawah hero */}
-        <motion.div
-          className="hero-sticker"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: [1, 1.05, 1], opacity: 1 }}
-          transition={{ duration: 3, repeat: Infinity, repeatType: 'loop', ease: 'easeInOut' }}
-        >
-          <img
-            src={`${import.meta.env.BASE_URL}assets/1_20260613_204618_0000.png`}
-            alt="Yuniar Sticker"
-          />
-        </motion.div>
+      {/* Floating Space Animation Elements (Saturnus & Kristal) in empty areas */}
+      <motion.img
+        src={`${import.meta.env.BASE_URL}assets/animasi/saturnus tb 1.PNG`}
+        alt=""
+        aria-hidden="true"
+        className="hero-anim-saturnus"
+        animate={{
+          y: [0, -25, 0],
+          rotate: [0, 6, -6, 0],
+          scale: [1, 1.04, 1],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+      />
+      <motion.img
+        src={`${import.meta.env.BASE_URL}assets/animasi/kristal tb 1.PNG`}
+        alt=""
+        aria-hidden="true"
+        className="hero-anim-kristal"
+        animate={{
+          y: [0, 20, 0],
+          rotate: [0, -8, 8, 0],
+          scale: [1, 1.05, 1],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 0.5,
+        }}
+      />
 
+      <div className="hero-container container">
         <div className="hero-content">
           <motion.div
             custom={0}

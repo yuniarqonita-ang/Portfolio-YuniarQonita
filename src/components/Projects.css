@@ -1,12 +1,33 @@
 .projects-section {
   position: relative;
+  overflow: hidden;
 }
 
-.project-sticker {
+.proj-anim-awan {
   position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 420px;
+  max-width: 60vw;
+  height: auto;
   pointer-events: none;
-  z-index: 1;
-  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
+  z-index: 0;
+  filter: drop-shadow(0 0 35px rgba(0, 240, 255, 0.3));
+  opacity: 0.7;
+}
+
+.proj-anim-saturnus {
+  position: absolute;
+  bottom: 80px;
+  right: -30px;
+  width: 220px;
+  max-width: 25vw;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+  filter: drop-shadow(0 0 25px rgba(157, 0, 255, 0.35));
+  opacity: 0.7;
 }
 
 .tabs {

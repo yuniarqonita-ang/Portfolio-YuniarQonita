@@ -17,6 +17,41 @@ const Contact = () => {
 
   return (
     <section className="section contact-section" id="contact">
+      {/* Decorative Space Animation Elements */}
+      <motion.img
+        src={`${import.meta.env.BASE_URL}assets/animasi/kristal tb 1.PNG`}
+        alt=""
+        aria-hidden="true"
+        className="contact-anim-kristal"
+        animate={{
+          y: [0, -18, 0],
+          rotate: [0, 10, -10, 0],
+          scale: [1, 1.05, 1],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+      />
+      <motion.img
+        src={`${import.meta.env.BASE_URL}assets/animasi/awan cuco tb.PNG`}
+        alt=""
+        aria-hidden="true"
+        className="contact-anim-awan"
+        animate={{
+          x: [-15, 15, -15],
+          y: [0, -10, 0],
+          opacity: [0.55, 0.8, 0.55],
+        }}
+        transition={{
+          duration: 9,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 0.5,
+        }}
+      />
+
       <div className="container">
         <motion.div
           className="section-title-wrapper"
