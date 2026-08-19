@@ -3,235 +3,162 @@
   overflow: hidden;
 }
 
-/* ========================
-   FLOATING ANIMATION IMAGES
-   (kristal, saturnus, awan — ditempatkan di About section)
-======================== */
-.about-anim-img {
+/* Background Space Animations */
+.about-anim-kristal {
   position: absolute;
+  top: 8%;
+  left: -30px;
+  width: 200px;
+  max-width: 25vw;
+  height: auto;
   pointer-events: none;
   z-index: 0;
-  filter: drop-shadow(0 0 20px rgba(157, 0, 255, 0.3));
+  filter: drop-shadow(0 0 25px rgba(0, 240, 255, 0.4));
+  opacity: 0.75;
 }
 
-/* Kristal kiri atas — besar, mengisi ruang kosong */
-.anim-kristal-1 {
-  left: -60px;
-  top: 10%;
-  width: 280px;
-  opacity: 0.7;
+.about-anim-saturnus {
+  position: absolute;
+  bottom: 8%;
+  right: -30px;
+  width: 230px;
+  max-width: 26vw;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+  filter: drop-shadow(0 0 30px rgba(255, 0, 127, 0.4));
+  opacity: 0.75;
 }
 
-/* Saturnus kanan tengah */
-.anim-saturnus-1 {
-  right: -50px;
-  top: 35%;
-  width: 260px;
-  opacity: 0.65;
-}
-
-/* Awan bawah tengah */
-.anim-awan {
-  left: 50%;
-  bottom: -30px;
-  transform: translateX(-50%);
-  width: 350px;
-  opacity: 0.5;
-}
-
-/* ========================
-   MAIN GRID
-======================== */
+/* Main Grid */
 .about-content {
   display: grid;
-  grid-template-columns: 420px 1fr;
-  gap: 5rem;
-  align-items: start;
-  margin-bottom: 5rem;
-  position: relative;
-  z-index: 1;
-}
-
-/* ========================
-   LEFT: PROFILE CARD
-======================== */
-.about-profile-card {
-  position: relative;
-  background: linear-gradient(135deg, rgba(16, 0, 40, 0.85), rgba(6, 6, 20, 0.9));
-  border: 1px solid rgba(157, 0, 255, 0.35);
-  border-radius: 28px;
-  padding: 3rem 2rem;
-  text-align: center;
-  overflow: hidden;
-  box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.5),
-    0 0 50px rgba(157, 0, 255, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-/* Animated glow behind card */
-.profile-glow-orb {
-  position: absolute;
-  top: -80px;
-  left: -80px;
-  width: 260px;
-  height: 260px;
-  background: conic-gradient(from 0deg, var(--accent-purple), var(--accent-color), var(--accent-pink), var(--accent-purple));
-  border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.35;
-  pointer-events: none;
-  animation: rotateGlow 12s linear infinite;
-}
-
-@keyframes rotateGlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* Big YQ initials */
-.profile-monogram {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  margin: 0 auto 1.5rem;
-  display: flex;
+  grid-template-columns: 380px 1fr;
+  gap: 4.5rem;
   align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   LEFT: FULL BODY PHOTO (TRANSPARENT & CLEAN)
+========================================= */
+.about-photo-wrapper {
+  position: relative;
+  display: flex;
   justify-content: center;
-  font-family: var(--font-display);
-  font-size: 2.8rem;
-  font-weight: 900;
-  background: linear-gradient(135deg, var(--accent-purple), var(--accent-color), var(--accent-pink));
-  color: white;
-  box-shadow:
-    0 0 0 5px rgba(157, 0, 255, 0.2),
-    0 0 40px rgba(157, 0, 255, 0.5),
-    0 15px 40px rgba(0, 0, 0, 0.5);
-  position: relative;
-  z-index: 1;
-  letter-spacing: 2px;
+  align-items: flex-end;
+  min-height: 520px;
 }
 
-.profile-name {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-color);
-  margin-bottom: 0.3rem;
-  position: relative;
-  z-index: 1;
+/* Ambient glowing neon aura behind her silhouette */
+.photo-neon-aura {
+  position: absolute;
+  width: 320px;
+  height: 480px;
+  background: radial-gradient(ellipse at center, rgba(0, 240, 255, 0.3) 0%, rgba(255, 0, 127, 0.25) 50%, transparent 75%);
+  border-radius: 50%;
+  filter: blur(45px);
+  z-index: 0;
+  pointer-events: none;
 }
 
-.profile-role {
-  font-size: 0.85rem;
-  color: var(--accent-color);
-  font-weight: 500;
-  margin-bottom: 2rem;
-  letter-spacing: 0.5px;
+.photo-figure {
   position: relative;
   z-index: 1;
-}
-
-/* Mini skill bars */
-.profile-skills-visual {
+  width: 100%;
+  max-width: 360px;
+  height: 520px;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  position: relative;
-  z-index: 1;
+  align-items: flex-end;
+  justify-content: center;
 }
 
-.mini-skill {
-  text-align: left;
-}
-
-.mini-skill-label {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.75rem;
-  color: var(--text-secondary);
-  font-weight: 500;
-  margin-bottom: 0.4rem;
-}
-
-.mini-skill-track {
-  height: 6px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.mini-skill-fill {
+.about-fullbody-img {
+  width: 100%;
   height: 100%;
-  border-radius: 6px;
-  box-shadow: 0 0 8px currentColor;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.7)) 
+          drop-shadow(0 0 25px rgba(0, 240, 255, 0.3));
+  transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-/* Badge floating */
+.about-photo-wrapper:hover .about-fullbody-img {
+  transform: scale(1.03);
+  filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.8)) 
+          drop-shadow(0 0 35px rgba(255, 0, 127, 0.45));
+}
+
+/* Floating Glass Badge */
 .about-badge {
   position: absolute;
-  bottom: -16px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 20px;
+  right: -10px;
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  padding: 0.8rem 1.2rem;
+  padding: 0.85rem 1.4rem;
   z-index: 10;
   white-space: nowrap;
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 240, 255, 0.2);
 }
 
-.badge-icon { font-size: 1.3rem; }
+.badge-icon { 
+  font-size: 1.4rem; 
+}
 
 .about-badge .badge-num {
   display: block;
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--accent-color), var(--accent-purple));
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-pink));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .about-badge .badge-text {
   display: block;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: var(--text-secondary);
-  font-weight: 500;
+  font-weight: 600;
 }
 
-/* ========================
-   RIGHT: TEXT
-======================== */
+/* =========================================
+   RIGHT: BIODATA & CONTENT
+========================================= */
 .about-lead {
   font-family: var(--font-display);
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--text-color);
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.4rem;
+  line-height: 1.5;
 }
 
 .about-body {
   color: var(--text-secondary);
   font-size: 1.05rem;
-  line-height: 1.9;
+  line-height: 1.85;
   margin-bottom: 2rem;
 }
 
 .personal-info {
-  padding: 1.8rem;
+  padding: 2rem;
   margin-bottom: 2rem;
+  background: rgba(14, 12, 34, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .info-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-  padding: 0.8rem 0;
-  border-bottom: 1px solid var(--border-color);
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .info-row:last-child {
@@ -241,65 +168,72 @@
 
 .info-label {
   display: block;
-  font-size: 0.75rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.2rem;
-  font-weight: 500;
+  font-size: 0.78rem;
+  color: var(--accent-color);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 .info-value {
   display: block;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-color);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .about-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.75rem;
 }
 
 .about-tag {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-color);
-  color: var(--text-secondary);
-  font-size: 0.8rem;
-  font-weight: 500;
-  padding: 0.4rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
   border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
 .about-tag:hover {
-  border-color: var(--accent-color);
-  color: var(--accent-color);
-  background: rgba(0, 240, 255, 0.08);
+  border-color: var(--accent-pink);
+  color: #ffffff;
+  background: rgba(255, 0, 127, 0.15);
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.4);
 }
 
-/* ========================
-   RESPONSIVE
-======================== */
-@media (max-width: 1100px) {
+/* Responsive */
+@media (max-width: 1024px) {
   .about-content {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 3.5rem;
   }
 
-  .about-profile-card {
-    max-width: 380px;
-    margin: 0 auto;
+  .about-photo-wrapper {
+    min-height: 440px;
   }
 
-  .anim-kristal-1 { width: 180px; left: -30px; }
-  .anim-saturnus-1 { width: 160px; right: -30px; }
-  .anim-awan { width: 220px; }
+  .photo-figure {
+    height: 440px;
+  }
+
+  .about-badge {
+    right: 15%;
+  }
 }
 
 @media (max-width: 576px) {
   .info-row {
     grid-template-columns: 1fr;
+    gap: 0.8rem;
   }
-
-  .about-anim-img { display: none; }
+  
+  .about-badge {
+    right: 0;
+  }
 }
