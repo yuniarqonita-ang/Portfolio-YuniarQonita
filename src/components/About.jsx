@@ -6,9 +6,9 @@ import './About.css';
 
 // Animasi gambar portofolio ditempatkan di section About (section kosong di kiri)
 const ANIM_IMAGES = [
-  { src: '/assets/animasi/kristal tb 1.PNG', className: 'anim-kristal-1' },
-  { src: '/assets/animasi/saturnus tb 1.PNG', className: 'anim-saturnus-1' },
-  { src: '/assets/animasi/awan cuco tb.PNG', className: 'anim-awan' },
+  { src: `${import.meta.env.BASE_URL}assets/animasi/kristal tb 1.PNG`, className: 'anim-kristal-1' },
+  { src: `${import.meta.env.BASE_URL}assets/animasi/saturnus tb 1.PNG`, className: 'anim-saturnus-1' },
+  { src: `${import.meta.env.BASE_URL}assets/animasi/awan cuco tb.PNG`, className: 'anim-awan' },
 ];
 
 const About = () => {
