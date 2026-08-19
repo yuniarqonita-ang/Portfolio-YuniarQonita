@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiExternalLink, FiGithub } from 'react-icons/fi';
+import { FiExternalLink, FiGithub, FiDownload } from 'react-icons/fi';
 import './Projects.css';
 
 const Projects = () => {
@@ -120,10 +120,30 @@ const Projects = () => {
   ];
 
   const webProjects = [
-    { id: 1, title: 'Beranda Portal PPID', img: '01_Beranda_Portal_PPID_PKTJ.jpg' },
-    { id: 2, title: 'Layanan & Klasifikasi', img: '02_Layanan_dan_Klasifikasi.jpg' },
-    { id: 3, title: 'Admin Panel Permohonan', img: '24_Admin_Panel_Permohonan.jpg' },
-    { id: 4, title: 'Form Identitas Pemohon', img: '23_Form_Data_Identitas_Pemohon.jpg' },
+    { id: 1, title: '01. Beranda Portal PPID', img: '01_Beranda_Portal_PPID_PKTJ.jpg' },
+    { id: 2, title: '02. Layanan & Klasifikasi', img: '02_Layanan_dan_Klasifikasi.jpg' },
+    { id: 3, title: '03. Klasifikasi Informasi', img: '03_Klasifikasi_Informasi.jpg' },
+    { id: 4, title: '04. Profil PPID PKTJ', img: '04_Profil_PPID_PKTJ.jpg' },
+    { id: 5, title: '05. Tugas & Tanggung Jawab', img: '05_Tugas_dan_Tanggung_Jawab.jpg' },
+    { id: 6, title: '06. Visi & Misi', img: '06_Visi_dan_Misi.jpg' },
+    { id: 7, title: '07. Struktur Organisasi', img: '07_Struktur_Organisasi.jpg' },
+    { id: 8, title: '08. Regulasi Acuan PPID', img: '08_Regulasi_Acuan_PPID.jpg' },
+    { id: 9, title: '09. Hubungi Kami', img: '09_Hubungi_Kami.jpg' },
+    { id: 10, title: '10. Informasi Berkala', img: '10_Informasi_Berkala.jpg' },
+    { id: 11, title: '11. Informasi Serta Merta', img: '11_Informasi_Serta_Merta.jpg' },
+    { id: 12, title: '12. Informasi Setiap Saat', img: '12_Informasi_Setiap_Saat.jpg' },
+    { id: 13, title: '13. Informasi Dikecualikan', img: '13_Informasi_Dikecualikan.jpg' },
+    { id: 14, title: '14. Daftar Informasi Publik', img: '14_Daftar_Informasi_Publik.jpg' },
+    { id: 15, title: '15. Maklumat Pelayanan', img: '15_Maklumat_Pelayanan.jpg' },
+    { id: 16, title: '16. Laporan Pelayanan Informasi', img: '16_Laporan_Pelayanan_Informasi.jpg' },
+    { id: 17, title: '17. Laporan Akses Informasi', img: '17_Laporan_Akses_Informasi.jpg' },
+    { id: 18, title: '18. Laporan Survey Kepuasan', img: '18_Laporan_Survey_Kepuasan.jpg' },
+    { id: 19, title: '19. Prosedur / Standar Operasional (SOP)', img: '19_Prosedur_SOP.jpg' },
+    { id: 20, title: '20. Agenda Kegiatan', img: '20_Agenda_Kegiatan.jpg' },
+    { id: 21, title: '21. FAQ & Pusat Bantuan', img: '21_FAQ_Help_Center.jpg' },
+    { id: 22, title: '22. Form Permohonan Informasi Publik', img: '22_Permohonan_Informasi_Form.jpg' },
+    { id: 23, title: '23. Form Data Identitas Pemohon', img: '23_Form_Data_Identitas_Pemohon.jpg' },
+    { id: 24, title: '24. Admin Panel Permohonan', img: '24_Admin_Panel_Permohonan.jpg' },
   ];
 
   const cardVariants = {
@@ -320,6 +340,15 @@ const Projects = () => {
                   <div className="web-project-links">
                     <a href="https://ppid.pktj.ac.id" target="_blank" rel="noopener noreferrer" className="btn-primary">
                       <FiExternalLink /> Live Website
+                    </a>
+                    <a
+                      href={`${import.meta.env.BASE_URL}assets/03_Proyek_Website_PPID_PKTJ/Dokumentasi_Lengkap_Portal_PPID_PKTJ.pdf`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary"
+                      style={{ background: 'linear-gradient(135deg, #00f0ff 0%, #0088ff 100%)', boxShadow: '0 8px 25px rgba(0, 240, 255, 0.4)' }}
+                    >
+                      <FiDownload /> {language === 'id' ? 'Dokumentasi PDF (24 Hal)' : 'PDF Documentation (24 Pgs)'}
                     </a>
                     <a href="https://github.com/yuniarqonita-ang/PPID-PKTJ.git" target="_blank" rel="noopener noreferrer" className="btn-outline">
                       <FiGithub /> GitHub
