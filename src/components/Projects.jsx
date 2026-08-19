@@ -144,6 +144,21 @@ const Projects = () => {
     { id: 22, title: '22. FAQ & Pusat Bantuan', img: '22_FAQ_Pusat_Bantuan.jpg' },
     { id: 23, title: '23. Portal Berita PPID', img: '23_Berita_Sosialisasi_PPID.jpg' },
     { id: 24, title: '24. Formulir Cetak Permohonan', img: '24_Formulir_Cetak_Permohonan.jpg' },
+    { id: 25, title: '25. Login Page Admin Panel', img: '25_Login_Page_Admin.jpg' },
+    { id: 26, title: '26. Dashboard Utama Admin Panel', img: '26_Admin_Dashboard.jpg' },
+    { id: 27, title: '27. Admin - Kelola Profil PPID', img: '27_Admin_Profil_PPID.jpg' },
+    { id: 28, title: '28. Admin - Kelola Tugas & Tanggung Jawab', img: '28_Admin_Tugas___Tanggung_Jawab.jpg' },
+    { id: 29, title: '29. Admin - Kelola Visi & Misi', img: '29_Admin_Visi___Misi.jpg' },
+    { id: 30, title: '30. Admin - Kelola Struktur Organisasi', img: '30_Admin_Struktur_Organisasi.jpg' },
+    { id: 31, title: '31. Admin - Kelola Regulasi', img: '31_Admin_Regulasi.jpg' },
+    { id: 32, title: '32. Admin - Kelola Kontak', img: '32_Admin_Kontak_Kami.jpg' },
+    { id: 33, title: '33. Admin - Data Permohonan Informasi', img: '33_Admin_Daftar_Permohonan_Informasi.jpg' },
+    { id: 34, title: '34. Admin - Kotak Masuk Pesan Kontak', img: '34_Admin_Pesan_Kontak.jpg' },
+    { id: 35, title: '35. Admin - Laporan Rekapitulasi', img: '35_Admin_Laporan_Bulanan.jpg' },
+    { id: 36, title: '36. Admin - Manajemen Berita & Publikasi', img: '36_Admin_Kelola_Berita.jpg' },
+    { id: 37, title: '37. Admin - Manajemen Hak Akses User', img: '37_Admin_Manajemen_User.jpg' },
+    { id: 38, title: '38. Admin - Kelola Menu Navigasi', img: '38_Admin_Kelola_Menu_Navigasi.jpg' },
+    { id: 39, title: '39. Admin - Pengaturan Hero Banner', img: '39_Admin_Edit_Hero_Banner.jpg' },
   ];
 
   const cardVariants = {
@@ -348,7 +363,7 @@ const Projects = () => {
                       className="btn-primary"
                       style={{ background: 'linear-gradient(135deg, #00f0ff 0%, #0088ff 100%)', boxShadow: '0 8px 25px rgba(0, 240, 255, 0.4)' }}
                     >
-                      <FiDownload /> {language === 'id' ? 'Dokumentasi PDF (24 Hal)' : 'PDF Documentation (24 Pgs)'}
+                      <FiDownload /> {language === 'id' ? 'Dokumentasi PDF Lengkap (39 Hal)' : 'Full PDF Documentation (39 Pgs)'}
                     </a>
                     <a href="https://github.com/yuniarqonita-ang/PPID-PKTJ.git" target="_blank" rel="noopener noreferrer" className="btn-outline">
                       <FiGithub /> GitHub
