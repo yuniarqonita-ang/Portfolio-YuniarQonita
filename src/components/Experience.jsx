@@ -24,6 +24,18 @@ const Experience = () => {
   const experiences = [
     {
       title: isEN
+        ? 'PPID Content & Portal Officer (Contract)'
+        : 'Pelaksana PPID (Kontrak) — Pengelola Konten & Portal',
+      org: 'Politeknik Keselamatan Transportasi Jalan (PKTJ) Tegal',
+      date: isEN ? 'Jul 2026 – Present' : 'Jul 2026 – Sekarang',
+      tags: isEN ? ['PPID Portal', 'Content & Media', 'Photography'] : ['Portal PPID', 'Konten & Media', 'Fotografi'],
+      desc: isEN
+        ? 'Managed and maintained the layout and digital content of the official PKTJ PPID web portal. Reviewed, edited, and sanitized public documents in compliance with public information disclosure regulations. Documented institutional activities using professional photography equipment. Designed official digital publication media (banners, posters, social media feeds, frame soumed) via Canva & CorelDRAW, and published official activity news articles on the main website.'
+        : 'Bertanggung jawab mengelola tata letak dan konten informasi pada web portal resmi PPID PKTJ secara berkala. Melakukan penyuntingan dan sanitasi dokumen publik sesuai regulasi keterbukaan informasi publik (UU KIP). Mendokumentasikan kegiatan instansi dengan kamera fotografi profesional, merancang aset media publikasi digital (banner, poster, ucapan hari besar, frame soumed) via Canva & CorelDRAW, serta menyusun dan menerbitkan artikel berita publikasi.',
+      color: '#00f0ff',
+    },
+    {
+      title: isEN
         ? 'IT Systems & Information Management Intern'
         : 'Penata Kelola Sistem dan Teknologi Informasi (Magang)',
       org: 'Politeknik Keselamatan Transportasi Jalan (PKTJ) Tegal',

@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
 import { motion } from 'framer-motion';
 import { FiDownload, FiMail } from 'react-icons/fi';
+import CVModal from './CVModal';
 import './Hero.css';
 
 // Fixed positions for floating background stars
@@ -20,6 +21,7 @@ const SPACE_ELEMENTS = [
 const Hero = () => {
   const { language } = useContext(LanguageContext);
   const t = translations[language].hero;
+  const [isCVModalOpen, setIsCVModalOpen] = useState(false);
 
   const textVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -163,14 +165,14 @@ const Hero = () => {
             variants={textVariants}
             className="hero-actions"
           >
-            <a
-              href={`${import.meta.env.BASE_URL}assets/01_CV_Sertifikat_Ijazah_KTP/CV_Yuniar_Qonita.pdf`}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => setIsCVModalOpen(true)}
               className="btn-primary"
+              style={{ cursor: 'pointer' }}
             >
               <FiDownload /> {t.downloadCV}
-            </a>
+            </button>
             <a href="#contact" className="btn-outline">
               <FiMail /> {t.contactMe}
             </a>
@@ -246,6 +248,13 @@ const Hero = () => {
         <div className="scroll-line"></div>
         <span>Scroll</span>
       </motion.div>
+
+      {/* CV Download Modal with 2 Options (ID / EN) */}
+      <CVModal
+        isOpen={isCVModalOpen}
+        onClose={() => setIsCVModalOpen(false)}
+        language={language}
+      />
     </section>
   );
 };
