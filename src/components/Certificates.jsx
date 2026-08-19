@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import './Certificates.css';
 
 const Certificates = () => {
@@ -18,8 +18,8 @@ const Certificates = () => {
     { left: 8, top: 84, size: 20, duration: 3.8, delay: 1.6 },
     { left: 92, top: 84, size: 20, duration: 3.3, delay: 0.6 },
   ];
-  const [hoveredId, setHoveredId] = useState(null);
   const [flippedCard, setFlippedCard] = useState(null);
+  const [selectedImg, setSelectedImg] = useState(null);
 
   const certificates = [
     {
@@ -214,6 +214,21 @@ const Certificates = () => {
               transition={{ duration: 0.55, delay: index * 0.1 }}
               whileHover={{ y: -10, scale: cert.isDouble ? 1 : 1.02 }}
               onClick={() => cert.isDouble && setFlippedCard(flippedCard === cert.id ? null : cert.id)}
+              onDoubleClick={(e) => {
+                e.stopPropagation();
+                if (cert.isDouble) {
+                  setSelectedImg({
+                    title: cert.title,
+                    img1: `${import.meta.env.BASE_URL}assets/01_CV_Sertifikat_Ijazah_KTP/${cert.img}`,
+                    img2: `${import.meta.env.BASE_URL}assets/01_CV_Sertifikat_Ijazah_KTP/${cert.img2}`,
+                  });
+                } else {
+                  setSelectedImg({
+                    title: cert.title,
+                    img1: `${import.meta.env.BASE_URL}assets/01_CV_Sertifikat_Ijazah_KTP/${cert.img}`,
+                  });
+                }
+              }}
             >
               <div className={`cert-card-inner ${flippedCard === cert.id ? 'flipped' : ''}`}>
                 <div className="cert-card-front">
@@ -223,6 +238,9 @@ const Certificates = () => {
                       alt={cert.title}
                     />
                     <div className="cert-img-shine"></div>
+                    <div className="cert-zoom-hint">
+                      {cert.isDouble ? '🖱️ Klik 2x untuk lihat kedua sisi' : '🖱️ Klik 2x untuk perbesar'}
+                    </div>
                   </div>
                   <div className="cert-body glass-panel">
                     <span className="cert-issuer" style={{ color: cert.color }}>
@@ -236,7 +254,7 @@ const Certificates = () => {
                         style={{ display: 'block', marginTop: '10px', fontSize: '0.85rem', color: 'var(--text-secondary)' }}
                         animate={{ rotate: flippedCard === cert.id ? 180 : 0 }}
                       >
-                        🔄 Klik untuk lihat sisi belakang
+                        🔄 Klik 1x untuk flip | Klik 2x untuk zoom
                       </motion.span>
                     )}
                   </div>
@@ -248,6 +266,7 @@ const Certificates = () => {
                         src={`${import.meta.env.BASE_URL}assets/01_CV_Sertifikat_Ijazah_KTP/${cert.img2}`}
                         alt={`${cert.title} - Belakang`}
                       />
+                      <div className="cert-zoom-hint">🖱️ Klik 2x untuk lihat kedua sisi</div>
                     </div>
                     <div className="cert-body glass-panel">
                       <span className="cert-issuer" style={{ color: cert.color }}>
@@ -260,7 +279,7 @@ const Certificates = () => {
                         style={{ display: 'block', marginTop: '10px', fontSize: '0.85rem', color: 'var(--text-secondary)' }}
                         animate={{ rotate: flippedCard === cert.id ? 0 : 180 }}
                       >
-                        🔄 Klik untuk kembali
+                        🔄 Klik 1x untuk kembali | Klik 2x untuk zoom
                       </motion.span>
                     </div>
                   </div>
@@ -270,6 +289,42 @@ const Certificates = () => {
           ))}
         </div>
       </div>
+
+      {/* ===== CERTIFICATE LIGHTBOX MODAL ===== */}
+      <AnimatePresence>
+        {selectedImg && (
+          <motion.div
+            className="lightbox-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImg(null)}
+          >
+            <motion.div
+              className={`lightbox-content ${selectedImg.img2 ? 'dual-layout' : 'single-layout'}`}
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button className="lightbox-close" onClick={() => setSelectedImg(null)}>✕</button>
+              <div className="lightbox-title-bar">{selectedImg.title}</div>
+              <div className="lightbox-images-container">
+                <div className="lightbox-image-wrapper">
+                  {selectedImg.img2 && <div className="lightbox-side-label">SISI DEPAN / SERTIFIKAT</div>}
+                  <img src={selectedImg.img1} alt="Preview Front" />
+                </div>
+                {selectedImg.img2 && (
+                  <div className="lightbox-image-wrapper">
+                    <div className="lightbox-side-label">SISI BELAKANG / TRANSKRIP NILAI</div>
+                    <img src={selectedImg.img2} alt="Preview Back" />
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
