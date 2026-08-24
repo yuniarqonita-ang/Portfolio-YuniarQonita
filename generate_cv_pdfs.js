@@ -19,7 +19,7 @@ const htmlEnglish = `
 <style>
   @page {
     size: A4;
-    margin: 10mm 15mm 10mm 15mm;
+    margin: 11mm 16mm 11mm 16mm;
   }
   * {
     box-sizing: border-box;
@@ -28,73 +28,86 @@ const htmlEnglish = `
   }
   body {
     font-family: 'Times New Roman', Times, serif;
-    color: #111;
-    line-height: 1.28;
+    color: #000000;
+    line-height: 1.32;
     font-size: 9.5pt;
-    background: #fff;
+    background: #ffffff;
   }
   .header {
     text-align: center;
-    margin-bottom: 6pt;
-    border-bottom: 1.2pt solid #800000;
-    padding-bottom: 4pt;
+    margin-bottom: 7pt;
+    border-bottom: 1.2pt solid #000000;
+    padding-bottom: 5pt;
   }
   .name {
-    font-size: 17pt;
+    font-size: 19pt;
     font-weight: bold;
-    letter-spacing: 1.2pt;
+    letter-spacing: 1.5pt;
     text-transform: uppercase;
-    color: #000;
+    color: #000000;
     margin-bottom: 2pt;
   }
-  .contact-info {
-    font-size: 9pt;
-    color: #333;
+  .contact-line {
+    font-size: 9.2pt;
+    color: #000000;
+    margin-bottom: 2pt;
+  }
+  .contact-links {
+    font-size: 9.2pt;
+    color: #000000;
+  }
+  a {
+    color: #000000;
+    text-decoration: underline;
   }
   .section-title {
     font-size: 10.5pt;
     font-weight: bold;
     text-transform: uppercase;
-    color: #800000;
-    border-bottom: 0.8pt solid #800000;
-    margin-top: 6pt;
-    margin-bottom: 3pt;
+    color: #000000;
+    border-bottom: 0.8pt solid #000000;
+    margin-top: 7pt;
+    margin-bottom: 3.5pt;
     padding-bottom: 1pt;
     letter-spacing: 0.4pt;
   }
   .item {
-    margin-bottom: 4.5pt;
+    margin-bottom: 5pt;
   }
   .item-header {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
     font-size: 9.5pt;
+    color: #000000;
   }
   .item-sub {
     display: flex;
     justify-content: space-between;
     font-style: italic;
     font-size: 9pt;
-    color: #222;
-    margin-bottom: 1pt;
+    color: #000000;
+    margin-bottom: 1.5pt;
   }
   ul {
-    margin-left: 13pt;
+    margin-left: 14pt;
     margin-top: 1pt;
   }
   li {
-    margin-bottom: 1pt;
+    margin-bottom: 1.5pt;
     text-align: justify;
     font-size: 9pt;
+    color: #000000;
   }
   .skills-category {
-    margin-bottom: 2.5pt;
+    margin-bottom: 3.5pt;
     font-size: 9pt;
     text-align: justify;
+    line-height: 1.34;
   }
   .skills-category strong {
     font-size: 9pt;
+    color: #000000;
   }
   .page-break {
     page-break-before: always;
@@ -106,8 +119,13 @@ const htmlEnglish = `
   <!-- ==================== PAGE 1 ==================== -->
   <div class="header">
     <div class="name">YUNIAR QONITA</div>
-    <div class="contact-info">
-      Tegal, Central Java, Indonesia &nbsp;|&nbsp; +62 895-2673-4638 &nbsp;|&nbsp; yuniarqonita@gmail.com
+    <div class="contact-line">
+      Tegal, Central Java, Indonesia &nbsp;|&nbsp; +62 895-2673-4638 &nbsp;|&nbsp; <a href="mailto:yuniarqonita@gmail.com">yuniarqonita@gmail.com</a>
+    </div>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/yuniarqonita" target="_blank">LinkedIn: linkedin.com/in/yuniarqonita</a> &nbsp;|&nbsp;
+      <a href="https://github.com/yuniarqonita-ang" target="_blank">GitHub: github.com/yuniarqonita-ang</a> &nbsp;|&nbsp;
+      <a href="https://yuniarqonita-ang.github.io/Portfolio-YuniarQonita/" target="_blank">Portfolio: yuniarqonita-ang.github.io/Portfolio-YuniarQonita/</a>
     </div>
   </div>
 
@@ -123,7 +141,7 @@ const htmlEnglish = `
       <span>GPA: 3.64 / 4.00</span>
     </div>
     <ul>
-      <li>Completed comprehensive academic curriculum with focus on analytical problem-solving and educational methodology.</li>
+      <li>Completed academic curriculum with focus on analytical problem-solving, statistics, and instructional methodologies.</li>
       <li>Teaching Practicum (PLP) Score: <strong>90.83 / Grade A</strong> (336 practicum hours).</li>
     </ul>
   </div>
@@ -151,11 +169,11 @@ const htmlEnglish = `
       <span>Tegal, Central Java</span>
     </div>
     <ul>
-      <li>Managed and maintained all layout modules and digital information content on the official PKTJ PPID web portal.</li>
-      <li>Reviewed, edited, and sanitized public documents in strict compliance with public information disclosure regulations.</li>
-      <li>Documented institutional events and official activities using professional photography equipment.</li>
-      <li>Designed official publication media assets (banners, event posters, social media feeds, frame soumed) via Canva & CorelDRAW along with official narrative captions.</li>
-      <li>Drafted, verified, and published official activity news articles on the institution's main portal.</li>
+      <li>Managed and updated layout structure and digital content on the official PKTJ PPID web portal (<a href="https://ppid.pktj.ac.id" target="_blank">ppid.pktj.ac.id</a>).</li>
+      <li>Reviewed, sanitized, and published public documents in strict compliance with the Public Information Disclosure Act (UU KIP).</li>
+      <li>Documented institutional events, workshops, and ceremonial activities using professional photography equipment.</li>
+      <li>Designed official digital publication assets (banners, posters, social media feeds, frame soumed) via Canva & CorelDRAW along with official release captions.</li>
+      <li>Compiled, verified, and published official activity news articles on the institution's primary portal.</li>
     </ul>
   </div>
 
@@ -169,9 +187,9 @@ const htmlEnglish = `
       <span>Tegal, Central Java</span>
     </div>
     <ul>
-      <li>Diagnosed and resolved OS-level technical issues; delivered responsive IT technical support to internal academic and administrative personnel.</li>
-      <li>Engineered and implemented the PPID PKTJ Back Office web portal application from design to production deployment.</li>
-      <li>Awarded Graduate Internship Distinction: <strong>Predikat SANGAT BAIK (Very Good)</strong> — Certificate No. MN.033.027419.02.2025.</li>
+      <li>Diagnosed and resolved OS-level technical issues; delivered responsive IT technical support to institutional personnel.</li>
+      <li>Designed and developed the PPID PKTJ Back Office web portal application from end-to-end for administrative request management.</li>
+      <li>Completed official Ministry internship with distinction: <strong>Predikat SANGAT BAIK (Very Good)</strong> — Certificate No. MN.033.027419.02.2025.</li>
     </ul>
   </div>
 
@@ -186,7 +204,7 @@ const htmlEnglish = `
     </div>
     <ul>
       <li>Completed a 336-hour teaching practicum encompassing lesson planning, classroom instruction, reflection, and reporting.</li>
-      <li>Earned a final practicum evaluation score of <strong>90.83 (Grade A)</strong> across all pedagogical competencies.</li>
+      <li>Achieved a final practicum evaluation score of <strong>90.83 (Grade A)</strong> across all assessed competencies.</li>
     </ul>
   </div>
 
@@ -201,7 +219,7 @@ const htmlEnglish = `
     </div>
     <ul>
       <li>Conducted field surveys for Land Value Zone (ZNT) data collection and geospatial mapping across Brebes Regency.</li>
-      <li>Processed land administrative archives and supported the PTSL Land Registration Program including land book printing.</li>
+      <li>Processed land administration archives and supported the Complete Systematic Land Registration (PTSL) Program including land title book printing and mapping.</li>
     </ul>
   </div>
 
@@ -215,12 +233,16 @@ const htmlEnglish = `
       <span>Tegal, Central Java</span>
     </div>
     <ul>
-      <li>Spearheaded numeracy and literacy reinforcement programs for elementary students; awarded MBKM scholarship stipend.</li>
-      <li>Developed interactive instructional materials, structured worksheets, and managed institutional social media communications.</li>
+      <li>Taught and mentored elementary school students in numeracy and literacy reinforcement; awarded MBKM scholarship stipend.</li>
+      <li>Developed interactive instructional media, structured learning worksheets, and managed institutional social media communications.</li>
     </ul>
   </div>
 
-  <div class="section-title">ACADEMIC & EXCHANGE EXPERIENCE</div>
+  <!-- ==================== PAGE BREAK ==================== -->
+  <div class="page-break"></div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="section-title" style="margin-top: 0;">ACADEMIC & EXCHANGE EXPERIENCE</div>
 
   <div class="item">
     <div class="item-header">
@@ -233,15 +255,11 @@ const htmlEnglish = `
     </div>
     <ul>
       <li>Selected through competitive national merit selection for cross-island academic student mobility program.</li>
-      <li>Enriched academic capabilities and cross-cultural adaptability; engaged in inter-regional research and Nusantara Module activities.</li>
+      <li>Enriched academic capabilities and cross-cultural adaptability; engaged in inter-regional collaborations and Nusantara Module activities.</li>
     </ul>
   </div>
 
-  <!-- ==================== PAGE BREAK ==================== -->
-  <div class="page-break"></div>
-
-  <!-- ==================== PAGE 2 ==================== -->
-  <div class="section-title" style="margin-top: 0;">LEADERSHIP & ORGANIZATIONAL EXPERIENCE</div>
+  <div class="section-title">LEADERSHIP & ORGANIZATIONAL EXPERIENCE</div>
 
   <div class="item">
     <div class="item-header">
@@ -253,8 +271,8 @@ const htmlEnglish = `
       <span>Tegal, Central Java</span>
     </div>
     <ul>
-      <li>Mentored executive committees on strategic leadership, program execution, and organizational compliance.</li>
-      <li>Audited administrative reports, organizational documentation, and guided succession planning.</li>
+      <li>Provided strategic direction and mentorship to executive boards in executing organizational work programs.</li>
+      <li>Audited administrative reports, ensured organizational compliance, and oversaw leadership succession planning.</li>
     </ul>
   </div>
 
@@ -268,8 +286,8 @@ const htmlEnglish = `
       <span>Tegal, Central Java</span>
     </div>
     <ul>
-      <li>Directed all departmental initiatives with full accountability over annual strategic planning, budget management, and execution.</li>
-      <li>Conferred with the <strong>Award of Excellence</strong> for exemplary leadership performance and successful program deliveries.</li>
+      <li>Led all departmental programs with full responsibility over annual strategic planning, budget management, and execution.</li>
+      <li>Awarded the university-level <strong>Award of Excellence</strong> for outstanding leadership performance and successful program delivery.</li>
     </ul>
   </div>
 
@@ -284,6 +302,7 @@ const htmlEnglish = `
     </div>
     <ul>
       <li>Managed centralized secretariat operations, formal correspondence, archival filings, and financial accountability reports.</li>
+      <li>Coordinated cross-departmental administrative workflows and ensured seamless operational continuity.</li>
     </ul>
   </div>
 
@@ -297,14 +316,14 @@ const htmlEnglish = `
       <span>Tegal, Central Java</span>
     </div>
     <ul>
-      <li>Led sponsorship acquisition campaigns, pitch proposals, and partnership contracts with corporate and institutional sponsors.</li>
-      <li>Certificate of Appointment No. 012/PMC-XIV/HMPS.PMAT-JL/2024.</li>
+      <li>Spearheaded corporate sponsorship outreach, pitch proposals, and partnership contracts with institutional sponsors.</li>
+      <li>Official Appointment Certificate No. 012/PMC-XIV/HMPS.PMAT-JL/2024.</li>
     </ul>
   </div>
 
   <div class="item">
     <div class="item-header">
-      <span>Event Committee Member — Pancasakti Mathematics Competition (PMC) XIII</span>
+      <span>Event Organizing Committee — Pancasakti Mathematics Competition (PMC) XIII</span>
       <span>2023</span>
     </div>
     <div class="item-sub">
@@ -312,7 +331,7 @@ const htmlEnglish = `
       <span>Tegal, Central Java</span>
     </div>
     <ul>
-      <li>Coordinated logistical execution and participant registration for regional mathematics competition — Certificate No. 002/PMC.XIII/HMPS.PMAT/V/2023.</li>
+      <li>Coordinated logistical execution, venue preparation, and participant registration for regional mathematics competition — Certificate No. 002/PMC.XIII/HMPS.PMAT/V/2023.</li>
     </ul>
   </div>
 
@@ -326,7 +345,7 @@ const htmlEnglish = `
       <span>Tegal, Central Java</span>
     </div>
     <ul>
-      <li>Contributed to academic workshop programs and digital media content creation for mathematics student community.</li>
+      <li>Contributed to academic workshops, peer tutoring sessions, and digital media publications for mathematics student community.</li>
     </ul>
   </div>
 
@@ -343,7 +362,7 @@ const htmlEnglish = `
     </div>
     <ul>
       <li>Certificate No. 58190 2166 0039333 2025 | Registration No. DKV 712 00031 2025.</li>
-      <li>Competent across 7 essential units: Design Brief, Design Principles, Typography, Color Harmony, Vector & Raster Software, Output Production.</li>
+      <li>Declared COMPETENT across all 7 competency units: Design Brief Execution, Design Principles, Typography & Layout, Color Schemes, Vector & Raster Software, and Production Output Creation.</li>
     </ul>
   </div>
 
@@ -357,7 +376,7 @@ const htmlEnglish = `
       <span>Certificate No. 2601066C25FF15</span>
     </div>
     <ul>
-      <li>Completed 260 hours of intensive practical studio training; passed all examination units with distinction.</li>
+      <li>Completed 260 hours of intensive practical studio training; passed all practical examinations with distinction.</li>
     </ul>
   </div>
 
@@ -371,23 +390,23 @@ const htmlEnglish = `
       <span>Certificate No. MN.033.027419.02.2025</span>
     </div>
     <ul>
-      <li>Completed official Ministry internship program with predicate <strong>SANGAT BAIK (Very Good)</strong>.</li>
+      <li>Completed official government internship program with distinction predicate: <strong>SANGAT BAIK (Very Good)</strong>.</li>
     </ul>
   </div>
 
-  <div class="section-title">SKILLS & COMPETENCIES</div>
+  <div class="section-title">TECHNICAL & PROFESSIONAL SKILLS</div>
 
   <div class="skills-category">
-    <strong>Design & Creative:</strong> Canva, CorelDRAW, Adobe Photoshop, Graphic Design, Brand Identity & Logo Design, Packaging Design, Social Media Feeds, Banner & Poster Design, Merchandise Design.
+    <strong>Design & Creative:</strong> Canva, CorelDRAW, Adobe Photoshop, Graphic Design, Brand Identity & Logo Design, Product Packaging Design, Social Media Graphics, Banner & Poster Design, Merchandise Design, Vector Illustration.
   </div>
   <div class="skills-category">
-    <strong>IT & Systems Governance:</strong> Web Back Office Development, IT Troubleshooting, OS Diagnostics & Maintenance, Technical Support, Portal Content Management System (CMS).
+    <strong>IT & Systems Governance:</strong> Web Back Office Development, IT Troubleshooting, Operating System Diagnostics & Maintenance, Technical Support, Portal Content Management System (CMS), Web Layout Maintenance.
   </div>
   <div class="skills-category">
-    <strong>Data Processing & Productivity:</strong> Microsoft Office (Word, Excel, PowerPoint), Google Workspace, SmartPLS, ANATES, Statistical Data Analysis, Field Survey Methodologies.
+    <strong>Data Processing & Productivity:</strong> Microsoft Office Suite (Word, Excel, PowerPoint), Google Workspace, SmartPLS, ANATES, Statistical Data Analysis & Interpretation, Field Survey Methodologies, Administrative Archiving.
   </div>
   <div class="skills-category">
-    <strong>Leadership & Soft Skills:</strong> Strategic Planning, Organization Management, Effective Communication, Problem Solving, Time Management, Team Collaboration & Mentoring.
+    <strong>Leadership & Management:</strong> Strategic Planning, Organization Management, Effective Communication, Problem Solving, Time Management, Team Collaboration, Project Documentation, Peer Mentoring.
   </div>
   <div class="skills-category">
     <strong>Languages:</strong> Indonesian — Native / Fluent (10/10).
@@ -405,7 +424,7 @@ const htmlIndonesian = `
 <style>
   @page {
     size: A4;
-    margin: 10mm 15mm 10mm 15mm;
+    margin: 11mm 16mm 11mm 16mm;
   }
   * {
     box-sizing: border-box;
@@ -414,73 +433,86 @@ const htmlIndonesian = `
   }
   body {
     font-family: 'Times New Roman', Times, serif;
-    color: #111;
-    line-height: 1.28;
+    color: #000000;
+    line-height: 1.32;
     font-size: 9.5pt;
-    background: #fff;
+    background: #ffffff;
   }
   .header {
     text-align: center;
-    margin-bottom: 6pt;
-    border-bottom: 1.2pt solid #800000;
-    padding-bottom: 4pt;
+    margin-bottom: 7pt;
+    border-bottom: 1.2pt solid #000000;
+    padding-bottom: 5pt;
   }
   .name {
-    font-size: 17pt;
+    font-size: 19pt;
     font-weight: bold;
-    letter-spacing: 1.2pt;
+    letter-spacing: 1.5pt;
     text-transform: uppercase;
-    color: #000;
+    color: #000000;
     margin-bottom: 2pt;
   }
-  .contact-info {
-    font-size: 9pt;
-    color: #333;
+  .contact-line {
+    font-size: 9.2pt;
+    color: #000000;
+    margin-bottom: 2pt;
+  }
+  .contact-links {
+    font-size: 9.2pt;
+    color: #000000;
+  }
+  a {
+    color: #000000;
+    text-decoration: underline;
   }
   .section-title {
     font-size: 10.5pt;
     font-weight: bold;
     text-transform: uppercase;
-    color: #800000;
-    border-bottom: 0.8pt solid #800000;
-    margin-top: 6pt;
-    margin-bottom: 3pt;
+    color: #000000;
+    border-bottom: 0.8pt solid #000000;
+    margin-top: 7pt;
+    margin-bottom: 3.5pt;
     padding-bottom: 1pt;
     letter-spacing: 0.4pt;
   }
   .item {
-    margin-bottom: 4.5pt;
+    margin-bottom: 5pt;
   }
   .item-header {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
     font-size: 9.5pt;
+    color: #000000;
   }
   .item-sub {
     display: flex;
     justify-content: space-between;
     font-style: italic;
     font-size: 9pt;
-    color: #222;
-    margin-bottom: 1pt;
+    color: #000000;
+    margin-bottom: 1.5pt;
   }
   ul {
-    margin-left: 13pt;
+    margin-left: 14pt;
     margin-top: 1pt;
   }
   li {
-    margin-bottom: 1pt;
+    margin-bottom: 1.5pt;
     text-align: justify;
     font-size: 9pt;
+    color: #000000;
   }
   .skills-category {
-    margin-bottom: 2.5pt;
+    margin-bottom: 3.5pt;
     font-size: 9pt;
     text-align: justify;
+    line-height: 1.34;
   }
   .skills-category strong {
     font-size: 9pt;
+    color: #000000;
   }
   .page-break {
     page-break-before: always;
@@ -492,8 +524,13 @@ const htmlIndonesian = `
   <!-- ==================== HALAMAN 1 ==================== -->
   <div class="header">
     <div class="name">YUNIAR QONITA</div>
-    <div class="contact-info">
-      Tegal, Jawa Tengah, Indonesia &nbsp;|&nbsp; +62 895-2673-4638 &nbsp;|&nbsp; yuniarqonita@gmail.com
+    <div class="contact-line">
+      Tegal, Jawa Tengah, Indonesia &nbsp;|&nbsp; +62 895-2673-4638 &nbsp;|&nbsp; <a href="mailto:yuniarqonita@gmail.com">yuniarqonita@gmail.com</a>
+    </div>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/yuniarqonita" target="_blank">LinkedIn: linkedin.com/in/yuniarqonita</a> &nbsp;|&nbsp;
+      <a href="https://github.com/yuniarqonita-ang" target="_blank">GitHub: github.com/yuniarqonita-ang</a> &nbsp;|&nbsp;
+      <a href="https://yuniarqonita-ang.github.io/Portfolio-YuniarQonita/" target="_blank">Portfolio: yuniarqonita-ang.github.io/Portfolio-YuniarQonita/</a>
     </div>
   </div>
 
@@ -537,7 +574,7 @@ const htmlIndonesian = `
       <span>Tegal, Jawa Tengah</span>
     </div>
     <ul>
-      <li>Mengelola dan memperbarui tata letak serta konten informasi pada web portal resmi PPID PKTJ secara berkala.</li>
+      <li>Mengelola dan memperbarui tata letak serta konten informasi pada web portal resmi PPID PKTJ (<a href="https://ppid.pktj.ac.id" target="_blank">ppid.pktj.ac.id</a>).</li>
       <li>Melakukan penyuntingan dan sanitasi dokumen publik sesuai regulasi keterbukaan informasi publik (UU KIP).</li>
       <li>Mendokumentasikan kegiatan instansi menggunakan peralatan kamera dan fotografi profesional.</li>
       <li>Merancang aset media digital (banner, poster, ucapan hari besar, frame soumed) via Canva & CorelDRAW beserta narasi rilis resminya.</li>
@@ -556,7 +593,7 @@ const htmlIndonesian = `
     </div>
     <ul>
       <li>Mendiagnosis dan menyelesaikan permasalahan teknis OS serta memberikan dukungan teknis IT bagi pengguna di lingkungan institusi.</li>
-      <li>Merancang dan mengembangkan aplikasi web portal Back Office PPID PKTJ secara menyeluruh (end-to-end).</li>
+      <li>Merancang dan mengembangkan aplikasi web portal Back Office PPID PKTJ secara menyeluruh (end-to-end) untuk pengelolaan permohonan informasi publik.</li>
       <li>Lulus program pemagangan dengan predikat <strong>SANGAT BAIK</strong> — Sertifikat No. MN.033.027419.02.2025.</li>
     </ul>
   </div>
@@ -587,7 +624,7 @@ const htmlIndonesian = `
     </div>
     <ul>
       <li>Melaksanakan survei Zona Nilai Tanah (ZNT) dan pengumpulan data geospasial pertanahan secara sistematis di wilayah Kab. Brebes.</li>
-      <li>Mengolah data administrasi pertanahan dan mendukung Program Pendaftaran Tanah Sistematis Lengkap (PTSL) termasuk pencetakan buku tanah.</li>
+      <li>Mengolah data administrasi pertanahan dan mendukung Program Pendaftaran Tanah Sistematis Lengkap (PTSL) termasuk pencetakan buku tanah dan pemetaan.</li>
     </ul>
   </div>
 
@@ -606,7 +643,11 @@ const htmlIndonesian = `
     </ul>
   </div>
 
-  <div class="section-title">PENGALAMAN AKADEMIK & PERTUKARAN</div>
+  <!-- ==================== PEMBATAS HALAMAN ==================== -->
+  <div class="page-break"></div>
+
+  <!-- ==================== HALAMAN 2 ==================== -->
+  <div class="section-title" style="margin-top: 0;">PENGALAMAN AKADEMIK & PERTUKARAN</div>
 
   <div class="item">
     <div class="item-header">
@@ -623,11 +664,7 @@ const htmlIndonesian = `
     </ul>
   </div>
 
-  <!-- ==================== PEMBATAS HALAMAN ==================== -->
-  <div class="page-break"></div>
-
-  <!-- ==================== HALAMAN 2 ==================== -->
-  <div class="section-title" style="margin-top: 0;">PENGALAMAN KEPEMIMPINAN & ORGANISASI</div>
+  <div class="section-title">PENGALAMAN KEPEMIMPINAN & ORGANISASI</div>
 
   <div class="item">
     <div class="item-header">
@@ -640,6 +677,7 @@ const htmlIndonesian = `
     </div>
     <ul>
       <li>Mendampingi dan memberikan masukan strategis dalam pelaksanaan program kerja serta memastikan tertib administrasi dan suksesi kepengurusan organisasi.</li>
+      <li>Mengaudit laporan pertanggungjawaban kegiatan dan membimbing kader pengurus dalam kepemimpinan organisasi.</li>
     </ul>
   </div>
 
@@ -669,6 +707,7 @@ const htmlIndonesian = `
     </div>
     <ul>
       <li>Mengelola administrasi persuratan resmi, pengarsipan berkas, serta menyusun laporan pertanggungjawaban kegiatan dan keuangan.</li>
+      <li>Mengkoordinasikan kelancaran alur komunikasi internal departemen dan dokumentasi kegiatan organisasi secara terstruktur.</li>
     </ul>
   </div>
 
@@ -682,7 +721,7 @@ const htmlIndonesian = `
       <span>Tegal, Jawa Tengah</span>
     </div>
     <ul>
-      <li>Memimpin penggalangan dana dan kerja sama sponsor dengan instansi eksternal — SK No. 012/PMC-XIV/HMPS.PMAT-JL/2024.</li>
+      <li>Memimpin penggalangan dana dan kerja sama sponsor dengan instansi eksternal serta mitra usaha — SK No. 012/PMC-XIV/HMPS.PMAT-JL/2024.</li>
     </ul>
   </div>
 
@@ -696,7 +735,7 @@ const htmlIndonesian = `
       <span>Tegal, Jawa Tengah</span>
     </div>
     <ul>
-      <li>Mengkoordinasikan kebutuhan teknis acara dan registrasi peserta kompetisi matematika tingkat regional — Sertifikat No. 002/PMC.XIII/HMPS.PMAT/V/2023.</li>
+      <li>Mengkoordinasikan kebutuhan teknis acara, sarana prasarana, dan registrasi peserta kompetisi matematika tingkat regional — Sertifikat No. 002/PMC.XIII/HMPS.PMAT/V/2023.</li>
     </ul>
   </div>
 
@@ -710,7 +749,7 @@ const htmlIndonesian = `
       <span>Tegal, Jawa Tengah</span>
     </div>
     <ul>
-      <li>Mendukung pelaksanaan workshop akademik, pelatihan teknologi, dan publikasi media edukatif mahasiswa.</li>
+      <li>Mendukung pelaksanaan workshop akademik, bimbingan belajar mahasiswa, dan publikasi media edukatif prodi.</li>
     </ul>
   </div>
 
@@ -759,22 +798,22 @@ const htmlIndonesian = `
     </ul>
   </div>
 
-  <div class="section-title">KEAHLIAN & KOMPETENSI</div>
+  <div class="section-title">KEAHLIAN & KOMPETENSI TEKNIS</div>
 
   <div class="skills-category">
-    <strong>Desain & Kreatif:</strong> Canva, CorelDRAW, Adobe Photoshop, Graphic Design, Desain Logo & Brand Identity, Desain Kemasan Produk, Feed Media Sosial, Desain Banner & Poster, Desain Merchandise.
+    <strong>Desain & Kreatif:</strong> Canva, CorelDRAW, Adobe Photoshop, Graphic Design, Desain Logo & Brand Identity, Desain Kemasan Produk, Feed Media Sosial, Desain Banner & Poster, Desain Merchandise, Ilustrasi Vektor.
   </div>
   <div class="skills-category">
-    <strong>Tata Kelola TI & Sistem:</strong> Pengembangan Web Back Office, IT Troubleshooting, Diagnosis & Pemeliharaan OS, Technical Support, Pengelolaan CMS Portal Web.
+    <strong>Tata Kelola TI & Sistem:</strong> Pengembangan Web Back Office, IT Troubleshooting, Diagnosis & Pemeliharaan OS, Technical Support, Pengelolaan CMS Portal Web, Maintenance Layout Web.
   </div>
   <div class="skills-category">
-    <strong>Pengolahan Data & Produktivitas:</strong> Microsoft Office (Word, Excel, PowerPoint), Google Workspace, SmartPLS, ANATES, Analisis Data Statistik, Metodologi Survei Lapangan.
+    <strong>Pengolahan Data & Produktivitas:</strong> Microsoft Office (Word, Excel, PowerPoint), Google Workspace, SmartPLS, ANATES, Analisis Data Statistik, Metodologi Survei Lapangan, Pengarsipan Dokumen.
   </div>
   <div class="skills-category">
-    <strong>Kepemimpinan & Soft Skills:</strong> Perencanaan Strategis, Manajemen Organisasi, Komunikasi Efektif, Problem Solving, Manajemen Waktu, Kolaborasi Tim & Mentoring.
+    <strong>Kepemimpinan & Soft Skills:</strong> Perencanaan Strategis, Manajemen Organisasi, Komunikasi Efektif, Problem Solving, Manajemen Waktu, Kolaborasi Tim, Dokumentasi Proyek & Mentoring.
   </div>
   <div class="skills-category">
-    <strong>Kemampuan Bahasa:</strong> Bahasa Indonesia (Penutur Asli / Lancar - 10/10).
+    <strong>Kemampuan Bahasa:</strong> Bahasa Indonesia — Penutur Asli / Lancar (10/10).
   </div>
 
 </body>
@@ -782,7 +821,7 @@ const htmlIndonesian = `
 `;
 
 async function generatePDFs() {
-  console.log('Launching browser...');
+  console.log('Launching browser to render Classic Harvard ATS PDFs (100% Black & White with Clickable Links)...');
   const browser = await puppeteer.launch({
     headless: 'new',
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -817,7 +856,7 @@ async function generatePDFs() {
   console.log('Updated default CV_Yuniar_Qonita.pdf');
 
   await browser.close();
-  console.log('Finished generating both CV PDFs!');
+  console.log('All Harvard ATS PDFs generated successfully!');
 }
 
 generatePDFs();
