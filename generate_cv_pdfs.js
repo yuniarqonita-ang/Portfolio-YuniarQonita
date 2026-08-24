@@ -390,7 +390,7 @@ const htmlEnglish = `
     <strong>Leadership & Soft Skills:</strong> Strategic Planning, Organization Management, Effective Communication, Problem Solving, Time Management, Team Collaboration & Mentoring.
   </div>
   <div class="skills-category">
-    <strong>Languages:</strong> Indonesian (Native / 10/10), English (Working Proficiency).
+    <strong>Languages:</strong> Indonesian — Native / Fluent (10/10).
   </div>
 
 </body>
@@ -774,7 +774,7 @@ const htmlIndonesian = `
     <strong>Kepemimpinan & Soft Skills:</strong> Perencanaan Strategis, Manajemen Organisasi, Komunikasi Efektif, Problem Solving, Manajemen Waktu, Kolaborasi Tim & Mentoring.
   </div>
   <div class="skills-category">
-    <strong>Kemampuan Bahasa:</strong> Bahasa Indonesia (Penutur Asli / Lancar - 10/10), Bahasa Inggris (Tingkat Menengah / Kerja).
+    <strong>Kemampuan Bahasa:</strong> Bahasa Indonesia (Penutur Asli / Lancar - 10/10).
   </div>
 
 </body>
