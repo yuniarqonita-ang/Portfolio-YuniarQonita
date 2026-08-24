@@ -19,7 +19,7 @@ const htmlEnglish = `
 <style>
   @page {
     size: A4;
-    margin: 8.5mm 14mm 8.5mm 14mm;
+    margin: 12mm 16mm 12mm 16mm;
   }
   * {
     box-sizing: border-box;
@@ -29,84 +29,88 @@ const htmlEnglish = `
   body {
     font-family: 'Times New Roman', Times, serif;
     color: #000000;
-    line-height: 1.26;
-    font-size: 9.2pt;
+    line-height: 1.34;
+    font-size: 9.8pt;
     background: #ffffff;
   }
   .header {
     text-align: center;
-    margin-bottom: 6pt;
-    border-bottom: 1.2pt solid #000000;
-    padding-bottom: 4.5pt;
+    margin-bottom: 7pt;
+    border-bottom: 1.4pt solid #000000;
+    padding-bottom: 5pt;
   }
   .name {
-    font-size: 18pt;
+    font-size: 20pt;
     font-weight: bold;
-    letter-spacing: 1.2pt;
+    letter-spacing: 1.5pt;
     text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 3pt;
+  }
+  .contact-line {
+    font-size: 9.5pt;
     color: #000000;
     margin-bottom: 2pt;
   }
-  .contact-line {
-    font-size: 9pt;
-    color: #000000;
-    margin-bottom: 1.5pt;
-  }
   .contact-links {
-    font-size: 9pt;
+    font-size: 9.5pt;
     color: #000000;
   }
-  a {
-    color: #000000;
+  a.link-blue {
+    color: #0056b3;
     text-decoration: underline;
+    font-weight: 600;
+  }
+  a.link-blue:hover {
+    color: #003d82;
   }
   .section-title {
-    font-size: 10.2pt;
+    font-size: 11pt;
     font-weight: bold;
     text-transform: uppercase;
     color: #000000;
-    border-bottom: 0.8pt solid #000000;
-    margin-top: 5.5pt;
-    margin-bottom: 3pt;
+    border-bottom: 1pt solid #000000;
+    margin-top: 7pt;
+    margin-bottom: 3.5pt;
     padding-bottom: 1pt;
-    letter-spacing: 0.4pt;
+    letter-spacing: 0.5pt;
   }
   .item {
-    margin-bottom: 4pt;
+    margin-bottom: 5pt;
   }
   .item-header {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    font-size: 9.2pt;
+    font-size: 9.8pt;
     color: #000000;
   }
   .item-sub {
     display: flex;
     justify-content: space-between;
     font-style: italic;
-    font-size: 8.8pt;
+    font-size: 9.3pt;
     color: #000000;
-    margin-bottom: 1pt;
+    margin-bottom: 1.5pt;
   }
   ul {
-    margin-left: 13pt;
+    margin-left: 15pt;
     margin-top: 1pt;
   }
   li {
-    margin-bottom: 1pt;
+    margin-bottom: 1.5pt;
     text-align: justify;
-    font-size: 8.8pt;
+    font-size: 9.3pt;
     color: #000000;
   }
   .skills-category {
-    margin-bottom: 3pt;
-    font-size: 8.8pt;
+    margin-bottom: 4pt;
+    font-size: 9.3pt;
     text-align: justify;
-    line-height: 1.28;
+    line-height: 1.35;
   }
   .skills-category strong {
-    font-size: 8.8pt;
+    font-size: 9.3pt;
     color: #000000;
   }
   .page-break {
@@ -120,12 +124,12 @@ const htmlEnglish = `
   <div class="header">
     <div class="name">YUNIAR QONITA</div>
     <div class="contact-line">
-      Tegal, Central Java, Indonesia &nbsp;|&nbsp; +62 895-2673-4638 &nbsp;|&nbsp; <a href="mailto:yuniarqonita@gmail.com">yuniarqonita@gmail.com</a>
+      Tegal, Central Java, Indonesia &nbsp;|&nbsp; +62 895-2673-4638 &nbsp;|&nbsp; <a href="mailto:yuniarqonita@gmail.com" class="link-blue">yuniarqonita@gmail.com</a>
     </div>
     <div class="contact-links">
-      <a href="https://www.linkedin.com/in/yuniarqonita" target="_blank">LinkedIn: linkedin.com/in/yuniarqonita</a> &nbsp;|&nbsp;
-      <a href="https://github.com/yuniarqonita-ang" target="_blank">GitHub: github.com/yuniarqonita-ang</a> &nbsp;|&nbsp;
-      <a href="https://yuniarqonita-ang.github.io/Portfolio-YuniarQonita/" target="_blank">Portfolio: yuniarqonita-ang.github.io/Portfolio-YuniarQonita/</a>
+      <a href="https://www.linkedin.com/in/yuniarqonita" class="link-blue" target="_blank">LinkedIn</a> &nbsp;|&nbsp;
+      <a href="https://github.com/yuniarqonita-ang" class="link-blue" target="_blank">GitHub</a> &nbsp;|&nbsp;
+      <a href="https://yuniarqonita-ang.github.io/Portfolio-YuniarQonita/" class="link-blue" target="_blank">Portfolio</a>
     </div>
   </div>
 
@@ -156,7 +160,7 @@ const htmlEnglish = `
       <span>School Exam Average: 84.00 / 100.00</span>
     </div>
     <ul>
-      <li>Graduated with official school examination average of <strong>84.00</strong> across national and institutional subjects.</li>
+      <li>Graduated from Science & Mathematics program with an official school examination average of <strong>84.00</strong> across all subjects.</li>
     </ul>
   </div>
 
@@ -172,7 +176,7 @@ const htmlEnglish = `
       <span>Tegal, Central Java</span>
     </div>
     <ul>
-      <li>Managed and updated layout structure and digital content on the official PKTJ PPID web portal (<a href="https://ppid.pktj.ac.id" target="_blank">ppid.pktj.ac.id</a>).</li>
+      <li>Managed and updated layout structure and digital content on the official PKTJ PPID web portal (<a href="https://ppid.pktj.ac.id" class="link-blue" target="_blank">ppid.pktj.ac.id</a>).</li>
       <li>Reviewed, sanitized, and published public documents in strict compliance with the Public Information Disclosure Act (UU KIP).</li>
       <li>Documented institutional events, workshops, and ceremonial activities using professional photography equipment.</li>
       <li>Designed official publication media assets (banners, event posters, social media feeds, frame soumed) via Canva & CorelDRAW along with official release captions.</li>
@@ -207,7 +211,7 @@ const htmlEnglish = `
     </div>
     <ul>
       <li>Completed a 336-hour teaching practicum encompassing lesson planning, classroom instruction, reflection, and reporting.</li>
-      <li>Achieved a final practicum evaluation score of <strong>90.83 (Grade A)</strong> across all assessed competencies.</li>
+      <li>Achieved a final practicum evaluation score of <strong>90.83 (Grade A)</strong> across all assessed pedagogical competencies.</li>
     </ul>
   </div>
 
@@ -241,11 +245,7 @@ const htmlEnglish = `
     </ul>
   </div>
 
-  <!-- ==================== PAGE BREAK ==================== -->
-  <div class="page-break"></div>
-
-  <!-- ==================== PAGE 2 ==================== -->
-  <div class="section-title" style="margin-top: 0;">ACADEMIC & EXCHANGE EXPERIENCE</div>
+  <div class="section-title">ACADEMIC & EXCHANGE EXPERIENCE</div>
 
   <div class="item">
     <div class="item-header">
@@ -262,7 +262,11 @@ const htmlEnglish = `
     </ul>
   </div>
 
-  <div class="section-title">LEADERSHIP & ORGANIZATIONAL EXPERIENCE</div>
+  <!-- ==================== PAGE BREAK ==================== -->
+  <div class="page-break"></div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="section-title" style="margin-top: 0;">LEADERSHIP & ORGANIZATIONAL EXPERIENCE</div>
 
   <div class="item">
     <div class="item-header">
@@ -427,7 +431,7 @@ const htmlIndonesian = `
 <style>
   @page {
     size: A4;
-    margin: 8.5mm 14mm 8.5mm 14mm;
+    margin: 12mm 16mm 12mm 16mm;
   }
   * {
     box-sizing: border-box;
@@ -437,84 +441,88 @@ const htmlIndonesian = `
   body {
     font-family: 'Times New Roman', Times, serif;
     color: #000000;
-    line-height: 1.26;
-    font-size: 9.2pt;
+    line-height: 1.34;
+    font-size: 9.8pt;
     background: #ffffff;
   }
   .header {
     text-align: center;
-    margin-bottom: 6pt;
-    border-bottom: 1.2pt solid #000000;
-    padding-bottom: 4.5pt;
+    margin-bottom: 7pt;
+    border-bottom: 1.4pt solid #000000;
+    padding-bottom: 5pt;
   }
   .name {
-    font-size: 18pt;
+    font-size: 20pt;
     font-weight: bold;
-    letter-spacing: 1.2pt;
+    letter-spacing: 1.5pt;
     text-transform: uppercase;
     color: #000000;
-    margin-bottom: 2.5pt;
+    margin-bottom: 3pt;
   }
   .contact-line {
-    font-size: 9pt;
+    font-size: 9.5pt;
     color: #000000;
-    margin-bottom: 1.5pt;
+    margin-bottom: 2pt;
   }
   .contact-links {
-    font-size: 9pt;
+    font-size: 9.5pt;
     color: #000000;
   }
-  a {
-    color: #000000;
+  a.link-blue {
+    color: #0056b3;
     text-decoration: underline;
+    font-weight: 600;
+  }
+  a.link-blue:hover {
+    color: #003d82;
   }
   .section-title {
-    font-size: 10.2pt;
+    font-size: 11pt;
     font-weight: bold;
     text-transform: uppercase;
     color: #000000;
-    border-bottom: 0.8pt solid #000000;
-    margin-top: 5.5pt;
-    margin-bottom: 3pt;
+    border-bottom: 1pt solid #000000;
+    margin-top: 7pt;
+    margin-bottom: 3.5pt;
     padding-bottom: 1pt;
-    letter-spacing: 0.4pt;
+    letter-spacing: 0.5pt;
   }
   .item {
-    margin-bottom: 4pt;
+    margin-bottom: 5pt;
   }
   .item-header {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    font-size: 9.2pt;
+    font-size: 9.8pt;
     color: #000000;
   }
   .item-sub {
     display: flex;
     justify-content: space-between;
     font-style: italic;
-    font-size: 8.8pt;
+    font-size: 9.3pt;
     color: #000000;
-    margin-bottom: 1pt;
+    margin-bottom: 1.5pt;
   }
   ul {
-    margin-left: 13pt;
+    margin-left: 15pt;
     margin-top: 1pt;
   }
   li {
-    margin-bottom: 1pt;
+    margin-bottom: 1.5pt;
     text-align: justify;
-    font-size: 8.8pt;
+    font-size: 9.3pt;
     color: #000000;
   }
   .skills-category {
-    margin-bottom: 3pt;
-    font-size: 8.8pt;
+    margin-bottom: 4pt;
+    font-size: 9.3pt;
     text-align: justify;
-    line-height: 1.28;
+    line-height: 1.35;
   }
   .skills-category strong {
-    font-size: 8.8pt;
+    font-size: 9.3pt;
     color: #000000;
   }
   .page-break {
@@ -528,12 +536,12 @@ const htmlIndonesian = `
   <div class="header">
     <div class="name">YUNIAR QONITA</div>
     <div class="contact-line">
-      Tegal, Jawa Tengah, Indonesia &nbsp;|&nbsp; +62 895-2673-4638 &nbsp;|&nbsp; <a href="mailto:yuniarqonita@gmail.com">yuniarqonita@gmail.com</a>
+      Tegal, Jawa Tengah, Indonesia &nbsp;|&nbsp; +62 895-2673-4638 &nbsp;|&nbsp; <a href="mailto:yuniarqonita@gmail.com" class="link-blue">yuniarqonita@gmail.com</a>
     </div>
     <div class="contact-links">
-      <a href="https://www.linkedin.com/in/yuniarqonita" target="_blank">LinkedIn: linkedin.com/in/yuniarqonita</a> &nbsp;|&nbsp;
-      <a href="https://github.com/yuniarqonita-ang" target="_blank">GitHub: github.com/yuniarqonita-ang</a> &nbsp;|&nbsp;
-      <a href="https://yuniarqonita-ang.github.io/Portfolio-YuniarQonita/" target="_blank">Portfolio: yuniarqonita-ang.github.io/Portfolio-YuniarQonita/</a>
+      <a href="https://www.linkedin.com/in/yuniarqonita" class="link-blue" target="_blank">LinkedIn</a> &nbsp;|&nbsp;
+      <a href="https://github.com/yuniarqonita-ang" class="link-blue" target="_blank">GitHub</a> &nbsp;|&nbsp;
+      <a href="https://yuniarqonita-ang.github.io/Portfolio-YuniarQonita/" class="link-blue" target="_blank">Portfolio</a>
     </div>
   </div>
 
@@ -564,7 +572,7 @@ const htmlIndonesian = `
       <span>Rata-rata Nilai Ujian Sekolah: 84.00</span>
     </div>
     <ul>
-      <li>Lulus dari peminatan MIPA dengan perolehan rata-rata nilai ujian sekolah sebesar <strong>84.00</strong>.</li>
+      <li>Lulus dari peminatan MIPA dengan perolehan rata-rata nilai ujian sekolah sebesar <strong>84.00</strong> pada seluruh mata pelajaran.</li>
     </ul>
   </div>
 
@@ -580,7 +588,7 @@ const htmlIndonesian = `
       <span>Tegal, Jawa Tengah</span>
     </div>
     <ul>
-      <li>Mengelola dan memperbarui tata letak serta konten informasi pada web portal resmi PPID PKTJ (<a href="https://ppid.pktj.ac.id" target="_blank">ppid.pktj.ac.id</a>).</li>
+      <li>Mengelola dan memperbarui tata letak serta konten informasi pada web portal resmi PPID PKTJ (<a href="https://ppid.pktj.ac.id" class="link-blue" target="_blank">ppid.pktj.ac.id</a>).</li>
       <li>Melakukan penyuntingan dan sanitasi dokumen publik sesuai regulasi keterbukaan informasi publik (UU KIP).</li>
       <li>Mendokumentasikan kegiatan instansi menggunakan peralatan kamera dan fotografi profesional.</li>
       <li>Merancang aset media digital (banner, poster, ucapan hari besar, frame soumed) via Canva & CorelDRAW beserta narasi rilis resminya.</li>
@@ -649,11 +657,7 @@ const htmlIndonesian = `
     </ul>
   </div>
 
-  <!-- ==================== PEMBATAS HALAMAN ==================== -->
-  <div class="page-break"></div>
-
-  <!-- ==================== HALAMAN 2 ==================== -->
-  <div class="section-title" style="margin-top: 0;">PENGALAMAN AKADEMIK & PERTUKARAN</div>
+  <div class="section-title">PENGALAMAN AKADEMIK & PERTUKARAN</div>
 
   <div class="item">
     <div class="item-header">
@@ -670,7 +674,11 @@ const htmlIndonesian = `
     </ul>
   </div>
 
-  <div class="section-title">PENGALAMAN KEPEMIMPINAN & ORGANISASI</div>
+  <!-- ==================== PEMBATAS HALAMAN ==================== -->
+  <div class="page-break"></div>
+
+  <!-- ==================== HALAMAN 2 ==================== -->
+  <div class="section-title" style="margin-top: 0;">PENGALAMAN KEPEMIMPINAN & ORGANISASI</div>
 
   <div class="item">
     <div class="item-header">
@@ -827,7 +835,7 @@ const htmlIndonesian = `
 `;
 
 async function generatePDFs() {
-  console.log('Rendering balanced Harvard ATS CVs...');
+  console.log('Rendering 100% full Page 1 and Page 2 with blue clickable links...');
   const browser = await puppeteer.launch({
     headless: 'new',
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
