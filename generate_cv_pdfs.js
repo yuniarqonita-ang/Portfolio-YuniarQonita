@@ -19,7 +19,7 @@ const htmlEnglish = `
 <style>
   @page {
     size: A4;
-    margin: 11mm 16mm 11mm 16mm;
+    margin: 8.5mm 14mm 8.5mm 14mm;
   }
   * {
     box-sizing: border-box;
@@ -29,31 +29,31 @@ const htmlEnglish = `
   body {
     font-family: 'Times New Roman', Times, serif;
     color: #000000;
-    line-height: 1.32;
-    font-size: 9.5pt;
+    line-height: 1.26;
+    font-size: 9.2pt;
     background: #ffffff;
   }
   .header {
     text-align: center;
-    margin-bottom: 7pt;
+    margin-bottom: 6pt;
     border-bottom: 1.2pt solid #000000;
-    padding-bottom: 5pt;
+    padding-bottom: 4.5pt;
   }
   .name {
-    font-size: 19pt;
+    font-size: 18pt;
     font-weight: bold;
-    letter-spacing: 1.5pt;
+    letter-spacing: 1.2pt;
     text-transform: uppercase;
     color: #000000;
     margin-bottom: 2pt;
   }
   .contact-line {
-    font-size: 9.2pt;
+    font-size: 9pt;
     color: #000000;
-    margin-bottom: 2pt;
+    margin-bottom: 1.5pt;
   }
   .contact-links {
-    font-size: 9.2pt;
+    font-size: 9pt;
     color: #000000;
   }
   a {
@@ -61,52 +61,52 @@ const htmlEnglish = `
     text-decoration: underline;
   }
   .section-title {
-    font-size: 10.5pt;
+    font-size: 10.2pt;
     font-weight: bold;
     text-transform: uppercase;
     color: #000000;
     border-bottom: 0.8pt solid #000000;
-    margin-top: 7pt;
-    margin-bottom: 3.5pt;
+    margin-top: 5.5pt;
+    margin-bottom: 3pt;
     padding-bottom: 1pt;
     letter-spacing: 0.4pt;
   }
   .item {
-    margin-bottom: 5pt;
+    margin-bottom: 4pt;
   }
   .item-header {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    font-size: 9.5pt;
+    font-size: 9.2pt;
     color: #000000;
   }
   .item-sub {
     display: flex;
     justify-content: space-between;
     font-style: italic;
-    font-size: 9pt;
+    font-size: 8.8pt;
     color: #000000;
-    margin-bottom: 1.5pt;
+    margin-bottom: 1pt;
   }
   ul {
-    margin-left: 14pt;
+    margin-left: 13pt;
     margin-top: 1pt;
   }
   li {
-    margin-bottom: 1.5pt;
+    margin-bottom: 1pt;
     text-align: justify;
-    font-size: 9pt;
+    font-size: 8.8pt;
     color: #000000;
   }
   .skills-category {
-    margin-bottom: 3.5pt;
-    font-size: 9pt;
+    margin-bottom: 3pt;
+    font-size: 8.8pt;
     text-align: justify;
-    line-height: 1.34;
+    line-height: 1.28;
   }
   .skills-category strong {
-    font-size: 9pt;
+    font-size: 8.8pt;
     color: #000000;
   }
   .page-break {
@@ -141,7 +141,7 @@ const htmlEnglish = `
       <span>GPA: 3.64 / 4.00</span>
     </div>
     <ul>
-      <li>Completed academic curriculum with focus on analytical problem-solving, statistics, and instructional methodologies.</li>
+      <li>Completed comprehensive academic curriculum with focus on analytical problem-solving, statistics, and instructional methodologies.</li>
       <li>Teaching Practicum (PLP) Score: <strong>90.83 / Grade A</strong> (336 practicum hours).</li>
     </ul>
   </div>
@@ -153,8 +153,11 @@ const htmlEnglish = `
     </div>
     <div class="item-sub">
       <span>SMA Negeri 5 Kota Tegal — Tegal, Central Java</span>
-      <span>Final Score: 80.00</span>
+      <span>School Exam Average: 84.00 / 100.00</span>
     </div>
+    <ul>
+      <li>Graduated with official school examination average of <strong>84.00</strong> across national and institutional subjects.</li>
+    </ul>
   </div>
 
   <div class="section-title">PROFESSIONAL EXPERIENCE</div>
@@ -172,7 +175,7 @@ const htmlEnglish = `
       <li>Managed and updated layout structure and digital content on the official PKTJ PPID web portal (<a href="https://ppid.pktj.ac.id" target="_blank">ppid.pktj.ac.id</a>).</li>
       <li>Reviewed, sanitized, and published public documents in strict compliance with the Public Information Disclosure Act (UU KIP).</li>
       <li>Documented institutional events, workshops, and ceremonial activities using professional photography equipment.</li>
-      <li>Designed official digital publication assets (banners, posters, social media feeds, frame soumed) via Canva & CorelDRAW along with official release captions.</li>
+      <li>Designed official publication media assets (banners, event posters, social media feeds, frame soumed) via Canva & CorelDRAW along with official release captions.</li>
       <li>Compiled, verified, and published official activity news articles on the institution's primary portal.</li>
     </ul>
   </div>
@@ -189,7 +192,7 @@ const htmlEnglish = `
     <ul>
       <li>Diagnosed and resolved OS-level technical issues; delivered responsive IT technical support to institutional personnel.</li>
       <li>Designed and developed the PPID PKTJ Back Office web portal application from end-to-end for administrative request management.</li>
-      <li>Completed official Ministry internship with distinction: <strong>Predikat SANGAT BAIK (Very Good)</strong> — Certificate No. MN.033.027419.02.2025.</li>
+      <li>Completed official Ministry internship with honors: <strong>Predikat SANGAT BAIK (Very Good)</strong> — Certificate No. MN.033.027419.02.2025.</li>
     </ul>
   </div>
 
@@ -424,7 +427,7 @@ const htmlIndonesian = `
 <style>
   @page {
     size: A4;
-    margin: 11mm 16mm 11mm 16mm;
+    margin: 8.5mm 14mm 8.5mm 14mm;
   }
   * {
     box-sizing: border-box;
@@ -434,31 +437,31 @@ const htmlIndonesian = `
   body {
     font-family: 'Times New Roman', Times, serif;
     color: #000000;
-    line-height: 1.32;
-    font-size: 9.5pt;
+    line-height: 1.26;
+    font-size: 9.2pt;
     background: #ffffff;
   }
   .header {
     text-align: center;
-    margin-bottom: 7pt;
+    margin-bottom: 6pt;
     border-bottom: 1.2pt solid #000000;
-    padding-bottom: 5pt;
+    padding-bottom: 4.5pt;
   }
   .name {
-    font-size: 19pt;
+    font-size: 18pt;
     font-weight: bold;
-    letter-spacing: 1.5pt;
+    letter-spacing: 1.2pt;
     text-transform: uppercase;
     color: #000000;
-    margin-bottom: 2pt;
+    margin-bottom: 2.5pt;
   }
   .contact-line {
-    font-size: 9.2pt;
+    font-size: 9pt;
     color: #000000;
-    margin-bottom: 2pt;
+    margin-bottom: 1.5pt;
   }
   .contact-links {
-    font-size: 9.2pt;
+    font-size: 9pt;
     color: #000000;
   }
   a {
@@ -466,52 +469,52 @@ const htmlIndonesian = `
     text-decoration: underline;
   }
   .section-title {
-    font-size: 10.5pt;
+    font-size: 10.2pt;
     font-weight: bold;
     text-transform: uppercase;
     color: #000000;
     border-bottom: 0.8pt solid #000000;
-    margin-top: 7pt;
-    margin-bottom: 3.5pt;
+    margin-top: 5.5pt;
+    margin-bottom: 3pt;
     padding-bottom: 1pt;
     letter-spacing: 0.4pt;
   }
   .item {
-    margin-bottom: 5pt;
+    margin-bottom: 4pt;
   }
   .item-header {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    font-size: 9.5pt;
+    font-size: 9.2pt;
     color: #000000;
   }
   .item-sub {
     display: flex;
     justify-content: space-between;
     font-style: italic;
-    font-size: 9pt;
+    font-size: 8.8pt;
     color: #000000;
-    margin-bottom: 1.5pt;
+    margin-bottom: 1pt;
   }
   ul {
-    margin-left: 14pt;
+    margin-left: 13pt;
     margin-top: 1pt;
   }
   li {
-    margin-bottom: 1.5pt;
+    margin-bottom: 1pt;
     text-align: justify;
-    font-size: 9pt;
+    font-size: 8.8pt;
     color: #000000;
   }
   .skills-category {
-    margin-bottom: 3.5pt;
-    font-size: 9pt;
+    margin-bottom: 3pt;
+    font-size: 8.8pt;
     text-align: justify;
-    line-height: 1.34;
+    line-height: 1.28;
   }
   .skills-category strong {
-    font-size: 9pt;
+    font-size: 8.8pt;
     color: #000000;
   }
   .page-break {
@@ -558,8 +561,11 @@ const htmlIndonesian = `
     </div>
     <div class="item-sub">
       <span>SMA Negeri 5 Kota Tegal — Tegal, Jawa Tengah</span>
-      <span>Nilai Rata-rata Ujian: 80.00</span>
+      <span>Rata-rata Nilai Ujian Sekolah: 84.00</span>
     </div>
+    <ul>
+      <li>Lulus dari peminatan MIPA dengan perolehan rata-rata nilai ujian sekolah sebesar <strong>84.00</strong>.</li>
+    </ul>
   </div>
 
   <div class="section-title">PENGALAMAN KERJA & PROFESIONAL</div>
@@ -821,7 +827,7 @@ const htmlIndonesian = `
 `;
 
 async function generatePDFs() {
-  console.log('Launching browser to render Classic Harvard ATS PDFs (100% Black & White with Clickable Links)...');
+  console.log('Rendering balanced Harvard ATS CVs...');
   const browser = await puppeteer.launch({
     headless: 'new',
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -829,34 +835,21 @@ async function generatePDFs() {
 
   const page = await browser.newPage();
 
-  // Generate English PDF
-  console.log('Rendering English CV...');
+  // English
   await page.setContent(htmlEnglish, { waitUntil: 'domcontentloaded' });
   const enPdfPath = path.join(OUT_DIR, 'CV_Yuniar_Qonita_EN.pdf');
-  await page.pdf({
-    path: enPdfPath,
-    format: 'A4',
-    printBackground: true,
-  });
-  console.log(`  -> Saved: ${enPdfPath}`);
+  await page.pdf({ path: enPdfPath, format: 'A4', printBackground: true });
+  console.log(`Saved: ${enPdfPath}`);
 
-  // Generate Indonesian PDF
-  console.log('Rendering Indonesian CV...');
+  // Indonesian
   await page.setContent(htmlIndonesian, { waitUntil: 'domcontentloaded' });
   const idPdfPath = path.join(OUT_DIR, 'CV_Yuniar_Qonita_ID.pdf');
-  await page.pdf({
-    path: idPdfPath,
-    format: 'A4',
-    printBackground: true,
-  });
-  console.log(`  -> Saved: ${idPdfPath}`);
+  await page.pdf({ path: idPdfPath, format: 'A4', printBackground: true });
+  console.log(`Saved: ${idPdfPath}`);
 
-  // Copy to default
   fs.copyFileSync(idPdfPath, path.join(OUT_DIR, 'CV_Yuniar_Qonita.pdf'));
-  console.log('Updated default CV_Yuniar_Qonita.pdf');
-
   await browser.close();
-  console.log('All Harvard ATS PDFs generated successfully!');
+  console.log('PDF generation complete!');
 }
 
 generatePDFs();
