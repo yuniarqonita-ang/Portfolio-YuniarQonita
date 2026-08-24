@@ -7,8 +7,10 @@ const CVModal = ({ isOpen, onClose, language = 'id' }) => {
   const isID = language === 'id';
 
   const baseUrl = import.meta.env.BASE_URL;
-  const cvIdUrl = `${baseUrl}assets/01_CV_Sertifikat_Ijazah_KTP/CV_Yuniar_Qonita_ID.pdf`;
-  const cvEnUrl = `${baseUrl}assets/01_CV_Sertifikat_Ijazah_KTP/CV_Yuniar_Qonita_EN.pdf`;
+  // Cache buster ensures visitors always get the freshest PDF without browser caching
+  const timestamp = Date.now();
+  const cvIdUrl = `${baseUrl}assets/01_CV_Sertifikat_Ijazah_KTP/CV_Yuniar_Qonita_ID.pdf?v=${timestamp}`;
+  const cvEnUrl = `${baseUrl}assets/01_CV_Sertifikat_Ijazah_KTP/CV_Yuniar_Qonita_EN.pdf?v=${timestamp}`;
 
   return (
     <AnimatePresence>
